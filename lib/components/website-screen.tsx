@@ -11,13 +11,7 @@ interface Props {
 export default function WebsiteScreen({ direction = 'ltr', children }: Props) {
   return (
     <div dir={direction}>
-      <Navbar />
-      <div id="main">
-        <div className="container">
-          {children}
-        </div>
-      </div>
-      <Footer />
+      {children}
     </div>
   )
 }

@@ -79,7 +79,7 @@ const colorScale = scaleOrdinal<CityName, string>({
 
 let tooltipTimeout: number;
 
-const BarGraphExample = ({
+const BarGraph = ({
   width,
   height,
   events = false,
@@ -187,7 +187,7 @@ const BarGraphExample = ({
           fontSize: '14px',
         }}
       >
-        <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" />
+        {/* <LegendOrdinal scale={colorScale} direction="row" labelMargin="0 15px 0 0" /> */}
       </div>
 
       {tooltipOpen && tooltipData && (
@@ -205,4 +205,4 @@ const BarGraphExample = ({
   );
 }
 
-export default BarGraphExample;
+export default BarGraph;

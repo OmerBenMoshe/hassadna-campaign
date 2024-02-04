@@ -20,10 +20,13 @@ export default function PersonalDetails({
                 value={formData.practicalBackground}
                 onChange={handleChange}
                 required
-                style={{ display: 'block', marginBottom: '10px' }} />
+                style={{ display: 'block', marginBottom: '10px' }} 
+                rows={5}
+                cols={100}/>
 
             <label htmlFor="linkedinProfile">Linkedin Profile</label>
-            <textarea
+            <input
+                type="text"
                 id="LinkedInProfile"
                 name="linkedinProfile"
                 placeholder="Enter your linkedin profile"

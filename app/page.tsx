@@ -7,7 +7,6 @@ import WebsiteScreen from '@/lib/components/website-screen';
 export default function Home() {
   return (
     <WebsiteScreen>
-      <div>hello</div>
       <Pie data={[
             { id: 0, value: 10, label: 'value A' },
             { id: 1, value: 15, label: 'value B' },

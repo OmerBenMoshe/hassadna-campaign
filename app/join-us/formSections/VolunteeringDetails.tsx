@@ -32,7 +32,7 @@ export default function VolunteeringDetails({
             {formData.volunteeringField.includes('other') && (
                 <input
                     type="text"
-                    name="other"
+                    name="otherVolunteering"
                     placeholder="Please specify"
                     value={formData.otherVolunteering}
                     onChange={handleOtherChange}

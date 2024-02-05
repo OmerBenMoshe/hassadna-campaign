@@ -5,8 +5,9 @@ import { FormValues } from '../JoinUsForm';
 interface StudentDetailsProps {
     formData: FormValues;
     showStudentQuestions: boolean;
+    isOtherStudyingField: boolean;
     handleChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-    handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    handleRadioChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     handleOtherChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     handleYesNoChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -14,8 +15,9 @@ interface StudentDetailsProps {
 export default function StudentDetails({
     formData,
     showStudentQuestions,
+    isOtherStudyingField,
     handleChange,
-    handleCheckboxChange,
+    handleRadioChange,
     handleOtherChange,
     handleYesNoChange,
 }: StudentDetailsProps) {
@@ -46,17 +48,17 @@ export default function StudentDetails({
                                 type="radio"
                                 name="studyingField"
                                 value={field}
-                                onChange={handleCheckboxChange}
+                                onChange={handleRadioChange}
                             />
                             <label>{field}</label>
                         </div>
                     ))}
-                    {formData.studyingField.includes('other') && (
+                    {isOtherStudyingField && (
                         <input
                             type="text"
-                            name="other"
+                            name="studyingField"
                             placeholder="Please specify"
-                            value={formData.other}
+                            value={formData.studyingField}
                             onChange={handleOtherChange}
                             style={{ display: 'block', marginBottom: '20px' }}
                         />

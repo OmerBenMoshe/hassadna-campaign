@@ -11,9 +11,9 @@ export interface FormValues {
   email: string;
   homeTown: string;
   volunteeringField: string[];
-  other: string;
+  otherVolunteering: string;
   school: string;
-  studyingField: string[];
+  studyingField: string;
   major: string;
   practicalBackground: string;
   linkedinProfile: string;
@@ -25,15 +25,16 @@ export default function JoinUsForm() {
     email: '',
     homeTown: '',
     volunteeringField: [''],
-    other: '',
+    otherVolunteering: '',
     school: '',
-    studyingField: [''],
+    studyingField: '',
     major: '',
     practicalBackground: '',
     linkedinProfile: '',
   });
 
   const [showStudentQuestions, setShowStudentQuestions] = useState(false);
+  const [isOtherStudyingField, setIsOtherStudyingField] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
@@ -60,6 +61,22 @@ export default function JoinUsForm() {
 
   const handleYesNoChange = (event: ChangeEvent<HTMLInputElement>) => {
     setShowStudentQuestions(event.target.value === 'yes');
+  };
+
+  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => {
+      let newState = { ...prevState, [name]: value };
+
+      if (name === 'studyingField' && value === 'other') {
+        newState = { ...newState, studyingField: '' };
+        setIsOtherStudyingField(true);
+      } else {
+        setIsOtherStudyingField(false);
+      }
+
+      return newState;
+    });
   };
 
   const handleSubmit = async (event: SyntheticEvent) => {
@@ -91,8 +108,9 @@ export default function JoinUsForm() {
         <StudentDetails
           formData={formData}
           showStudentQuestions={showStudentQuestions}
+          isOtherStudyingField={isOtherStudyingField}
           handleChange={handleChange}
-          handleCheckboxChange={handleCheckboxChange}
+          handleRadioChange={handleRadioChange}
           handleOtherChange={handleOtherChange}
           handleYesNoChange={handleYesNoChange}
         />

@@ -34,7 +34,7 @@ export default function VolunteeringDetails({
                     type="text"
                     name="other"
                     placeholder="Please specify"
-                    value={formData.other}
+                    value={formData.otherVolunteering}
                     onChange={handleOtherChange}
                     style={{ display: 'block', marginBottom: '20px' }}
                 />

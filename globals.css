@@ -4,6 +4,10 @@
 /* these are some initial rules to standardize element display and behaviour */
 /* you can read more about why following the above link, or searching for */
 /* "css normalize" or "css reset" in your favorite search engine ;) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 *, *::before, *::after {
   box-sizing: border-box;

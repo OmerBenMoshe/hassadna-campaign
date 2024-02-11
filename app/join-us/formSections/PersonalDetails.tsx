@@ -15,6 +15,7 @@ export default function PersonalDetails({
         <>
             <label htmlFor="firstName">First Name</label>
             <input
+                className='text-black rounded-lg bg-white p-2'
                 type="text"
                 id="firstName"
                 name="firstName"
@@ -27,6 +28,7 @@ export default function PersonalDetails({
 
             <label htmlFor="lastName">Last Name</label>
             <input
+                className='text-black rounded-lg bg-white p-2'
                 type="text"
                 id="lastName"
                 name="lastName"
@@ -39,6 +41,7 @@ export default function PersonalDetails({
 
             <label htmlFor="email">Email</label>
             <input
+                className='text-black rounded-lg bg-white p-2'
                 type="email"
                 id="email"
                 name="email"
@@ -49,7 +52,9 @@ export default function PersonalDetails({
                 style={{ display: 'block', marginBottom: '10px' }} />
 
             <label htmlFor="homeTown">Hometown</label>
-            <input type="text"
+            <input
+                className='text-black rounded-lg bg-white p-2'
+                type="text"
                 id="homeTown"
                 name="homeTown"
                 placeholder="Enter your homeTown"
@@ -57,7 +62,7 @@ export default function PersonalDetails({
                 onChange={handleChange}
                 required
                 style={{ display: 'block', marginBottom: '10px' }} />
-                
+
         </>
 
     );

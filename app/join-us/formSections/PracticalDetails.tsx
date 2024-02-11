@@ -14,18 +14,20 @@ export default function PersonalDetails({
         <>
             <label htmlFor="practicalBackground">Detail Your Practical Background In a Few Sentences</label>
             <textarea
+                className='text-black rounded-lg bg-white p-2'
                 id="practicalBackground"
                 name="practicalBackground"
                 placeholder="Detail your practical background"
                 value={formData.practicalBackground}
                 onChange={handleChange}
                 required
-                style={{ display: 'block', marginBottom: '10px' }} 
+                style={{ display: 'block', marginBottom: '10px' }}
                 rows={5}
-                cols={100}/>
+                cols={100} />
 
             <label htmlFor="linkedinProfile">Linkedin Profile</label>
             <input
+                className='text-black rounded-lg bg-white p-2'
                 type="text"
                 id="LinkedInProfile"
                 name="linkedinProfile"

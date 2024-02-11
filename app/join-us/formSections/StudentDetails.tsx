@@ -29,15 +29,23 @@ export default function StudentDetails({
 
             <label>Are You Currently a Student?</label>
 
-            <div onChange={handleYesNoChange}>
-                <input type="radio" value="yes" name="student" /> Yes
-                <input type="radio" value="no" name="student" /> No
+            <div className='space-x-7 items-center text-center' onChange={handleYesNoChange}>
+                <input className='' type="radio" value="yes" name="student" /> Yes  
+                <input className='' type="radio" value="no" name="student" /> No
             </div>
 
             {showStudentQuestions && (
                 <>
                     <label htmlFor="major">What Is Your Major?</label>
-                    <input type="text" id="major" name="major" placeholder="Enter your major" value={formData.major} onChange={handleChange} style={{ display: 'block', marginBottom: '10px' }} />
+                    <input
+                        className='text-black rounded-lg bg-white p-2'
+                        type="text"
+                        id="major"
+                        name="major"
+                        placeholder="Enter your major"
+                        value={formData.major}
+                        onChange={handleChange}
+                        style={{ display: 'block', marginBottom: '10px' }} />
 
                     <label> Currently Studying:</label>
                     <br />
@@ -55,6 +63,7 @@ export default function StudentDetails({
                     ))}
                     {isOtherStudyingField && (
                         <input
+                            className='text-black rounded-lg bg-white p-2'
                             type="text"
                             name="studyingField"
                             placeholder="Please specify"
@@ -67,7 +76,15 @@ export default function StudentDetails({
                     <br />
 
                     <label htmlFor="school">What School Do You Attend?</label>
-                    <input type="text" id="school" name="school" placeholder="Enter your school" value={formData.school} onChange={handleChange} style={{ display: 'block', marginBottom: '10px' }} />
+                    <input
+                        className='text-black rounded-lg bg-white p-2'
+                        type="text"
+                        id="school"
+                        name="school"
+                        placeholder="Enter your school"
+                        value={formData.school}
+                        onChange={handleChange}
+                        style={{ display: 'block', marginBottom: '10px' }} />
                 </>
             )}
         </>

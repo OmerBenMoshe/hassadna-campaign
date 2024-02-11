@@ -1,4 +1,6 @@
 'use client';
+
+import '@/globals.css';
 import React, { useState, ChangeEvent, SyntheticEvent } from 'react';
 import PersonalDetails from './formSections/PersonalDetails';
 import VolunteeringDetails from './formSections/VolunteeringDetails';
@@ -35,6 +37,7 @@ export default function JoinUsForm() {
 
   const [showStudentQuestions, setShowStudentQuestions] = useState(false);
   const [isOtherStudyingField, setIsOtherStudyingField] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
@@ -86,45 +89,62 @@ export default function JoinUsForm() {
     // For example, if you're using a state to store form data:
     console.log(formData);
 
-    // Redirect to a new page
-    window.location.href = '/thank-you'; // Replace '/thank-you' with the path to your thank you page
+    setSubmitted(true);
   };
 
   return (
-    <div className="content">
-      <form className="form" onSubmit={handleSubmit}>
-        <PersonalDetails
-          formData={formData}
-          handleChange={handleChange}
-        />
+    <>
+      {submitted &&
+        <div className="flex flex-col items-center justify-center bg-black text-white h-screen">
+          <h1 className='text-5xl'>Thank you for applying!</h1>
+          <p> We will get back to you as soon as possible.</p>
+        </div>
+      }
+      
+      {!submitted &&
+        <div className="flex flex-col items-center justify-center bg-black text-white">
+          <div className="demo-notes padding-1 text-black w-full text-center">
+            <p className='text-base'>
+              Hey, We&apos;d love to know you better. Please fill out the form below to
+              get in touch with us. It may take a few days for us to get back to you, but we will.
+            </p>
+          </div>
+          <h1 className='text-4xl mt-4'>Join Hassadna</h1>
+          <form className="form flex flex-col items-center justify-center bg-black" onSubmit={handleSubmit}>
+            <PersonalDetails
+              formData={formData}
+              handleChange={handleChange}
+            />
 
-        <VolunteeringDetails
-          formData={formData}
-          handleCheckboxChange={handleCheckboxChange}
-          handleOtherChange={handleOtherChange} />
+            <VolunteeringDetails
+              formData={formData}
+              handleCheckboxChange={handleCheckboxChange}
+              handleOtherChange={handleOtherChange} />
 
-        <br />
+            <br />
 
-        <StudentDetails
-          formData={formData}
-          showStudentQuestions={showStudentQuestions}
-          isOtherStudyingField={isOtherStudyingField}
-          handleChange={handleChange}
-          handleRadioChange={handleRadioChange}
-          handleOtherChange={handleOtherChange}
-          handleYesNoChange={handleYesNoChange}
-        />
+            <StudentDetails
+              formData={formData}
+              showStudentQuestions={showStudentQuestions}
+              isOtherStudyingField={isOtherStudyingField}
+              handleChange={handleChange}
+              handleRadioChange={handleRadioChange}
+              handleOtherChange={handleOtherChange}
+              handleYesNoChange={handleYesNoChange}
+            />
 
-        <br />
+            <br />
 
-        <PracticalDetails
-          formData={formData}
-          handleChange={handleChange}
-        />
+            <PracticalDetails
+              formData={formData}
+              handleChange={handleChange}
+            />
 
-        <button type="submit">Submit</button>
+            <button type="submit">Submit</button>
 
-      </form>
-    </div>
+          </form>
+        </div>
+      }
+    </>
   );
 }

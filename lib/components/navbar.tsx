@@ -4,11 +4,11 @@ import logo from '../assets/logo.svg'
 
 export default function Navbar() {
   return (
-    <div id="NavbarContainer" className='flex justify-between items-center'>
-      <div id="JoinContainer" className='flex items-center'>
-        <button id="JoinButton" className='rounded-lg bg-white text-black p-2'>Join us!</button>
-        </div>
-      <div id="LogoContainer" className='flex items-center'>
+    <div className='flex justify-between items-center sticky top-0'>
+      <div className='flex items-center p-5'>
+        <button className='rounded-full outline-none text-black'>Join us!</button>
+      </div>
+      <div className='flex items-center p-5'>
         <Image src={logo} alt="Logo" width={288} height={36}/>
         </div>
     </div>

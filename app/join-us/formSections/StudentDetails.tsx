@@ -30,7 +30,7 @@ export default function StudentDetails({
             <label>Are You Currently a Student?</label>
 
             <div className='space-x-7 items-center text-center' onChange={handleYesNoChange}>
-                <input className='' type="radio" value="yes" name="student" /> Yes  
+                <input className='' type="radio" value="yes" name="student" /> Yes
                 <input className='' type="radio" value="no" name="student" /> No
             </div>
 
@@ -49,18 +49,19 @@ export default function StudentDetails({
 
                     <label> Currently Studying:</label>
                     <br />
-
-                    {studentFields.map((field, index) => (
-                        <div key={index}>
-                            <input
-                                type="radio"
-                                name="studyingField"
-                                value={field}
-                                onChange={handleRadioChange}
-                            />
-                            <label>{field}</label>
-                        </div>
-                    ))}
+                    <div className='grid grid-cols-2'>
+                        {studentFields.map((field, index) => (
+                            <div key={index}>
+                                <input
+                                    type="radio"
+                                    name="studyingField"
+                                    value={field}
+                                    onChange={handleRadioChange}
+                                />
+                                <label>{field}</label>
+                            </div>
+                        ))}
+                    </div>
                     {isOtherStudyingField && (
                         <input
                             className='text-black rounded-lg bg-white p-2'

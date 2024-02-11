@@ -20,17 +20,19 @@ export default function VolunteeringDetails({
             <label
                 className='text-white p-2'
                 htmlFor="volunteeringField">What field are you interested in volunteering in?</label>
-            {fields.map((field, index) => (
-                <div key={index}>
-                    <input
-                        type="checkbox"
-                        name="volunteeringField"
-                        value={field}
-                        onChange={handleCheckboxChange}
-                    />
-                    <label className='text-transform: capitalize ml-2'>{field}</label>
-                </div>
-            ))}
+            <div className='grid grid-cols-3'>
+                {fields.map((field, index) => (
+                    <div key={index}>
+                        <input
+                            type="checkbox"
+                            name="volunteeringField"
+                            value={field}
+                            onChange={handleCheckboxChange}
+                        />
+                        <label className='text-transform: capitalize ml-2'>{field}</label>
+                    </div>
+                ))}
+            </div>
             {formData.volunteeringField.includes('other') && (
                 <input
                     className='text-black rounded-lg bg-white p-2'

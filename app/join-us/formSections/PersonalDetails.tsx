@@ -51,8 +51,8 @@ export default function PersonalDetails({
             <label htmlFor="homeTown">Hometown</label>
             <input type="text"
                 id="homeTown"
-                name="homeTown"
-                placeholder="Enter your homeTown"
+                name="hometown"
+                placeholder="Enter your hometown"
                 value={formData.homeTown}
                 onChange={handleChange}
                 required

@@ -12,11 +12,11 @@ export default function PersonalDetails({
 }: PracticalDetailsProps) {
     return (
         <>
-            <label htmlFor="practicalBackground">Detail Your Practical Background In a Few Sentences</label>
+            <label htmlFor="practicalBackground">What is your practical background?</label>
             <textarea
                 id="practicalBackground"
                 name="practicalBackground"
-                placeholder="Detail your practical background"
+                placeholder="Practical background"
                 value={formData.practicalBackground}
                 onChange={handleChange}
                 required
@@ -29,7 +29,7 @@ export default function PersonalDetails({
                 type="text"
                 id="LinkedInProfile"
                 name="linkedinProfile"
-                placeholder="Enter your linkedin profile"
+                placeholder="Enter your LinkedIn profile"
                 value={formData.linkedinProfile}
                 onChange={handleChange}
                 style={{ display: 'block', marginBottom: '10px' }} />

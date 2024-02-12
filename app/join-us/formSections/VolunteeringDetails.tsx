@@ -12,12 +12,12 @@ export default function VolunteeringDetails({
     handleCheckboxChange,
     handleOtherChange,
 }: VolunteeringDetailsProps) {
-    const fields = ['programming', 'data', 'graphic design', 'ux', 'content', 'other'];
-    const studentFields = ['practical course', "bachelor's degree", "master's degree", 'other'];
+    const fields = ['Programming', 'Data', 'Graphic design', 'UX/UI', 'Creating Content', 'Other'];
+    const studentFields = ['Practical course', "Bachelor's degree", "Master's degree", 'Other'];
 
     return (
         <>
-            <label htmlFor="volunteeringField">What field are you interested in volunteering in?</label>
+            <label htmlFor="volunteeringField">What field are you interested to volunteer in?</label>
             {fields.map((field, index) => (
                 <div key={index}>
                     <input

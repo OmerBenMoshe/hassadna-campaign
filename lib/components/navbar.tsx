@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { APP_NAME, COURSE_GITHUB, DEMOS_ENABLED } from '../config';
 import styled from 'styled-components';
+import styled from 'styled-components';
 import Image from 'next/image';
 import logo from './logo.svg'
 
@@ -38,7 +39,14 @@ export default function Navbar() {
         <JoinButton>Join us!</JoinButton>
       </JoinContainer>
       <LogoContainer>
+    <NavbarContainer>
+      <JoinContainer>
+        <JoinButton>Join us!</JoinButton>
+      </JoinContainer>
+      <LogoContainer>
         <Image src={logo} alt="Logo" width={288} height={36}/>
+      </LogoContainer>
+    </NavbarContainer>
       </LogoContainer>
     </NavbarContainer>
   )

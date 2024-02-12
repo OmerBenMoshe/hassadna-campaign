@@ -6,6 +6,10 @@ import PersonalDetails from './formSections/PersonalDetails';
 import VolunteeringDetails from './formSections/VolunteeringDetails';
 import StudentDetails from './formSections/StudentDetails';
 import PracticalDetails from './formSections/PracticalDetails';
+import { createClient } from '@supabase/supabase-js'
+
+// Create a single supabase client for interacting with your database
+const supabase = createClient('https://fevrcdgxpvtzvsqfqako.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZldnJjZGd4cHZ0enZzcWZxYWtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc2NjY1ODUsImV4cCI6MjAyMzI0MjU4NX0.L_4VuBpOD1J4prWrBPSlnhOW8BdJCwDG7Lc0vlh6rug')
 
 export interface FormValues {
   firstName: string;
@@ -87,10 +91,17 @@ export default function JoinUsForm() {
 
     // Handle form data here. You can send it to a server or do something else with it.
     // For example, if you're using a state to store form data:
-    console.log(formData);
+    const { data, error } = await supabase
+    .from('volunteer-form')
+    .insert([formData]);
 
+  if (error) {
+    console.error('Error submitting form: ', error);
+  } else {
+    console.log('Form submitted successfully: ', data);
     setSubmitted(true);
-  };
+  }
+};
 
   return (
     <>
@@ -106,7 +117,7 @@ export default function JoinUsForm() {
           <div className="demo-notes padding-1 text-black w-full text-center">
             <p className='text-base'>
               Hey, We&apos;d love to know you better. Please fill out the form below to
-              get in touch with us. It may take a few days for us to get back to you, but we will.
+              get in touch with us. 
             </p>
           </div>
           <h1 className='text-4xl mt-4'>Join Hassadna</h1>

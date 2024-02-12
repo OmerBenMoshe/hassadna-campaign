@@ -56,7 +56,7 @@ export default function PersonalDetails({
                 className='text-black rounded-lg bg-white p-2'
                 type="text"
                 id="homeTown"
-                name="hometown"
+                name="homeTown"
                 placeholder="Enter your hometown"
                 value={formData.homeTown}
                 onChange={handleChange}

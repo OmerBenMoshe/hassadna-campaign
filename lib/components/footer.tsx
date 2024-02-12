@@ -1,5 +1,5 @@
 import { COURSE_CREDITS } from '@/lib/config';
-import { AuthAction } from './auth';
+// import { AuthAction } from './auth';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
           This is some example footer content.
         </div>
         <div className="center">
-          <AuthAction />
+          {/* <AuthAction /> */}
         </div>
         <div className="center text-sm">
           {COURSE_CREDITS}

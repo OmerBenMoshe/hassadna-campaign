@@ -12,23 +12,26 @@ export default function VolunteeringDetails({
     handleCheckboxChange,
     handleOtherChange,
 }: VolunteeringDetailsProps) {
-    const fields = ['Programming', 'Data', 'Graphic design', 'UX/UI', 'Creating Content', 'Other'];
-    const studentFields = ['Practical course', "Bachelor's degree", "Master's degree", 'Other'];
-
+    const fields = ['programming', 'data', 'graphic design', 'ux', 'content', 'other'];
+    
     return (
         <>
-            <label htmlFor="volunteeringField">What field are you interested to volunteer in?</label>
-            {fields.map((field, index) => (
-                <div key={index}>
-                    <input
-                        type="checkbox"
-                        name="volunteeringField"
-                        value={field}
-                        onChange={handleCheckboxChange}
-                    />
-                    <label>{field}</label>
-                </div>
-            ))}
+            <label
+                className='text-white p-2'
+                htmlFor="volunteeringField">What field are you interested in volunteering in?</label>
+            <div className='grid grid-cols-3'>
+                {fields.map((field, index) => (
+                    <div key={index}>
+                        <input
+                            type="checkbox"
+                            name="volunteeringField"
+                            value={field}
+                            onChange={handleCheckboxChange}
+                        />
+                        <label className='text-transform: capitalize ml-2'>{field}</label>
+                    </div>
+                ))}
+            </div>
             {formData.volunteeringField.includes('other') && (
                 <input
                     className='text-black rounded-lg bg-white p-2'

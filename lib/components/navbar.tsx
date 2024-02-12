@@ -5,7 +5,6 @@ import { APP_NAME, COURSE_GITHUB, DEMOS_ENABLED } from '../config';
 import styled from 'styled-components';
 import Image from 'next/image';
 import logo from './logo.svg'
-
 const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;

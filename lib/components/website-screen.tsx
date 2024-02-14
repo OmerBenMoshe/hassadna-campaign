@@ -12,11 +12,9 @@ interface Props {
 
 export default function WebsiteScreen({ direction = 'ltr', children }: Props) {
   return (
-    <div className="flex flex-col items-center justify-center bg-black">
-      <div dir={direction} className="sticky top-0 z-50">
+    <div className='flex flex-col w-full h-full'>
         <Navbar />
         {children}
-      </div>
     </div>
   )
 }

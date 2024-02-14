@@ -1,7 +1,7 @@
 const PendulumSVG = ({...rest}) => (
   <svg {...rest}
-    width="586"
-    height="837"
+    // width={window.innerWidth * 0.8}
+    // height={window.innerHeight * 0.8}
     viewBox="0 0 586 837"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

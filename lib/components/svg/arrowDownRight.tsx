@@ -1,8 +1,8 @@
 const ArrowDownRightSVG = ({...rest}) => (
   <svg
-    width="149"
-    height="149"
-    viewBox="0 0 149 149"
+    width="150"
+    height="150"
+    viewBox="0 0 150 149"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...rest}

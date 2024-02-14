@@ -6,7 +6,7 @@ export default function WhySection() {
   return (
     <section
       dir={"rtl"}
-      className="flex flex-col items-start px-10 py-20 space-y-20 h-[calc(100vh-88px)] relative"
+      className="flex flex-col items-start px-10 py-20 space-y-20 h-[calc(100vh-88px)] relative bg-white"
     >
       <div className="text-8xl text-bold">
         // למה אנחנו <br />

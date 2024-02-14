@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children } : { children: ReactNode }) {
-  const bodyClassNames = `${ubuntu.variable} ${process.env.CSS_DEBUG}`
+  const bodyClassNames = `${ubuntu.variable} ${process.env.CSS_DEBUG} font-secondary`
   return (
     <html>
-      <body className={bodyClassNames} style={{ fontFamily: 'Anomalia' }}>
+      <body className={bodyClassNames}>
         <div id="page-grid">
           {children}
         </div>

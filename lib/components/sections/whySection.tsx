@@ -11,7 +11,7 @@ export default function WhySection() {
         dir={"rtl"}
         className="flex flex-col items-start justify-center space-y-20"
       >
-        <div className="text-8xl text-bold">
+        <div className="text-8xl text-bold font-primary">
           // למה אנחנו <br />
           עושים את זה?
         </div>
@@ -29,7 +29,7 @@ export default function WhySection() {
           ושיח ציבורי מבוסס נתונים.
           <br />
         </p>
-        <button className="p-2 px-8 text-3xl border-none rounded-full text-bold bg-orange">
+        <button className="p-2 px-8 text-3xl border-none rounded-full text-bold bg-orange font-primary">
           לא מאמינים? הנה כמה דוגמאות &gt;&gt;&gt;
         </button>
       </div>

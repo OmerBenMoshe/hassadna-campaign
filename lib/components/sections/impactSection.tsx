@@ -16,7 +16,7 @@ const ImpactSection = () => {
         </div>
         <div className={"w-2/5"}></div>
       </div>
-      <div className="text-7xl md:text-8xl">
+      <div className="text-7xl md:text-8xl font-primary">
         <span className="text-neon">* IMPACT *</span> בזכות הסדנא
       </div>
       <div className={"flex"}>

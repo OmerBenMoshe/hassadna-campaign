@@ -6,7 +6,7 @@ export default function WhySection() {
   return (
     <section
       dir={"rtl"}
-      className="flex flex-col items-start h-full px-10 py-20 space-y-20"
+      className="flex flex-col items-start px-10 py-20 space-y-20 h-[calc(100vh-88px)] relative"
     >
       <div className="text-8xl text-bold">
         // למה אנחנו <br />
@@ -26,7 +26,7 @@ export default function WhySection() {
       </button>
       
 
-      <PendulumSVG className={'absolute top-0 left-48'} />
+      <PendulumSVG className={'absolute -top-20 left-48'} />
     </section>
   );
 }

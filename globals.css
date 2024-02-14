@@ -8,6 +8,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Anomalia';
+  src: url('public/fonts/anomalia-demibold-aaa\ copy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "SimplerPro";
+  src: url("public/fonts/SimplerPro-Regular.otf") format("opentype");
+}
 
 *, *::before, *::after {
   box-sizing: border-box;

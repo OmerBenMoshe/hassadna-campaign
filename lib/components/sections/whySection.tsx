@@ -12,7 +12,7 @@ export default function WhySection() {
         className="flex flex-col items-start justify-center space-y-20"
       >
         <div className="text-8xl text-bold font-primary">
-          // למה אנחנו <br />
+        &#47;&#47; למה אנחנו <br />
           עושים את זה?
         </div>
         <p className="text-xl">

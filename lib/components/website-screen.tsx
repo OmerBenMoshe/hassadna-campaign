@@ -11,9 +11,9 @@ interface Props {
 
 export default function WebsiteScreen({ direction = "ltr", children }: Props) {
   return (
-    <div className="flex flex-col h-screen">
+    <>
       <Navbar />
       <main>{children}</main>
-    </div>
+    </>
   );
 }

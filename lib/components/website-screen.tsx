@@ -7,6 +7,8 @@ interface Props {
   children: ReactNode[] | ReactNode;
   direction?: "rtl" | "ltr";
   colors: string
+  onScroll: any
+  className: string
 }
 
 export default function WebsiteScreen({ direction = "ltr", children, colors, ...rest }: Props) {

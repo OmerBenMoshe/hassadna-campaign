@@ -3,6 +3,10 @@ export const COURSE_GITHUB = 'https://github.com/digital-product-jam-2024';
 export const COURSE_WELCOME_TEXT = 'Hey there, and welcome! Read the source code, and navigate to the demos.';
 export const COURSE_CREDITS = 'Digital Product Jam 2023-2024';
 
+export const LIGHT_COLORS = "bg-white text-darkGray"
+export const DARK_COLORS = "bg-darkGray text-white"
+
+
 export const DEMOS_ENABLED = process.env.DEMOS_ENABLED === 'true' ? true : false;
 export const DEMOS = [
   {

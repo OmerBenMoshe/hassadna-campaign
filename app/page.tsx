@@ -2,10 +2,11 @@
 import ImpactSection from "@/lib/components/sections/impactSection";
 import WhySection from "@/lib/components/sections/whySection";
 import WebsiteScreen from "@/lib/components/website-screen";
-import { useEffect, useRef, useState } from "react";
+import { LIGHT_COLORS, DARK_COLORS } from "@/lib/config";
+import { useState } from "react";
 
 const AMOUNT_OF_SECTIONS = 2;
-const SECTION_COLORS = ["bg-white text-darkGray", "bg-darkGray text-white", "bg-white text-darkGray"];
+const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS];
 
 export default function Home() {
   const [colors, setColors] = useState(SECTION_COLORS[0]);

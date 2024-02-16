@@ -2,9 +2,9 @@
 
 import PendulumSVG from "../svg/pendulum";
 
-export default function WhySection({bgColor}: {bgColor: string}) {
+export default function WhySection({colors}: {colors: string}) {
   return (
-    <section className={`flex justify-around ${bgColor} h-[calc(100vh-88px)] transition`}>
+    <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition`}>
       <PendulumSVG className={"h-screen-sm pb-10"} />
 
       <div

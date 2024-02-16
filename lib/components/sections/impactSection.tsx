@@ -1,11 +1,11 @@
 import ArrowDownLeftSVG from "../svg/arrowDownLeft";
 import ArrowDownRightSVG from "../svg/arrowDownRight";
 
-const ImpactSection = ({bgColor}: {bgColor: string}) => {
+const ImpactSection = ({colors}: {colors: string}) => {
   return (
     <section
       dir={"rtl"}
-      className={`flex flex-col justify-around h-screen px-20 text-white transition ${bgColor}`}
+      className={`flex flex-col justify-around h-screen px-20 transition ${colors}`}
     >
       <div className={"flex"}>
         <div className="flex items-center w-3/5">

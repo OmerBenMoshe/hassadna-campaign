@@ -5,30 +5,28 @@ import WebsiteScreen from "@/lib/components/website-screen";
 import { useEffect, useRef, useState } from "react";
 
 const AMOUNT_OF_SECTIONS = 2;
-const SECTION_COLORS = ["bg-white", "bg-darkGray"];
-const SCROLL_OFFSET = 100;
+const SECTION_COLORS = ["bg-white text-darkGray", "bg-darkGray text-white"];
 
 export default function Home() {
-  const [bgColor, setBgColor] = useState("bg-white");
+  const [colors, setColors] = useState(SECTION_COLORS[0]);
 
   const handleScroll = (e: any) => {
     const sectionHeight = window.innerHeight / (AMOUNT_OF_SECTIONS - 1);
     const currentTopY = e.target.scrollTop;
-    const focusedSection = Math.ceil((currentTopY+(sectionHeight/2)) % sectionHeight);
-    // (450 + 475) % 950
-    console.log(currentTopY + '+(' + sectionHeight + '/2))%' + sectionHeight);
-    if (currentTopY > sectionHeight/2) {
-      setBgColor(SECTION_COLORS[1]);
-    } else {
-      setBgColor(SECTION_COLORS[0]);
-    }
+    const focusedSection = Math.floor(
+      (currentTopY + sectionHeight / 2) / sectionHeight
+    );
+    setColors(SECTION_COLORS[focusedSection]);
   };
-  console.log(bgColor);
 
   return (
-    <WebsiteScreen onScroll={handleScroll} className="h-screen overflow-auto">
-      <WhySection bgColor={bgColor} />
-      <ImpactSection bgColor={bgColor} />
+    <WebsiteScreen
+      colors={colors}
+      onScroll={handleScroll}
+      className="h-screen overflow-auto"
+    >
+      <WhySection colors={colors} />
+      <ImpactSection colors={colors} />
     </WebsiteScreen>
   );
 }

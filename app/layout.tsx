@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children } : { children: ReactNode }) {
   return (
     <html>
-      <body className={"font-secondary h-screen"}>
+      <body className={"font-secondary"}>
           {children}
       </body>
     </html>

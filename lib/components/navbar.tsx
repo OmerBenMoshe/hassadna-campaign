@@ -9,7 +9,7 @@ const linkClasses = "text-darkGray hover:text-darkGray-300 hover:underline";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 flex items-center justify-between p-5 text-lg bg-white">
+    <nav className="sticky top-0 z-10 flex items-center justify-between p-5 text-lg">
       <button className={"m-0 rounded-full text-2xl text-bold p-2 bg-orange shadow-sharp border-none font-primary"}>
         <span className="text-white">CLICK HERE TO </span>
         <span className="text-darkGray">JOIN US!*</span>{" "}

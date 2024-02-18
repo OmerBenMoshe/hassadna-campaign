@@ -12,6 +12,7 @@ module.exports = {
       neon: "#28FFE6",
       darkGray: "#303A3A",
       white: "#FCFCF8",
+      purple: "#6C22E5",
     },
     fontFamily: {
       primary: "Anomalia",

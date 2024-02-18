@@ -1,5 +1,6 @@
 "use client";
 import ImpactSection from "@/lib/components/sections/impactSection";
+import WhoWeAreSection from "@/lib/components/sections/whoWeAreSection";
 import WhySection from "@/lib/components/sections/whySection";
 import WebsiteScreen from "@/lib/components/website-screen";
 import { LIGHT_COLORS, DARK_COLORS } from "@/lib/config";
@@ -26,6 +27,7 @@ export default function Home() {
       onScroll={handleScroll}
       className="h-screen overflow-auto"
     >
+      <WhoWeAreSection colors={colors} />
       <WhySection colors={colors} />
       <ImpactSection colors={colors} />
     </WebsiteScreen>

@@ -1,8 +1,6 @@
 "use client";
 
-import PendulumSVG from "../svg/pendulum";
 import OrangeArrowSVG from "../svg/orangeArrow";
-import Image from "next/image";
 
 export default function WhoWeAreSection({colors}: {colors: string}) {
   return (

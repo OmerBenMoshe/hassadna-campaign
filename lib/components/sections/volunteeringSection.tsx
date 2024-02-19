@@ -56,16 +56,16 @@ const VolunteeringSection = () => {
   type fieldPositions = { [key: string]: string };
 
   const positions = {
-    'עיצוב גרפי': { top: '83%', left: '11.5%' },
-    'ניהול פרויקט': { top: '106.7%', left: '20%' },
-    'ניהול מערכות מידע': { top: '88%', left: '24.1%' },
-    'עיצוב חווית משתמש': { top: '76.8%', left: '33.7%' },
-    'אינפוגרפיקה': { top: '20.5%', left: '36.4%' },
-    'ניהול מוצר': { top: '106.7%', left: '40.7%' },
-    'ניתוח נתונים': { top: '88.5%', left: '53%' },
+    'עיצוב גרפי': { top: '80%', left: '11.5%' },
+    'ניהול פרויקט': { top: '100%', left: '20%' },
+    'ניהול מערכות מידע': { top: '84%', left: '24.1%' },
+    'עיצוב חווית משתמש': { top: '75%', left: '33.7%' },
+    'אינפוגרפיקה': { top: '28%', left: '36.4%' },
+    'ניהול מוצר': { top: '100%', left: '40.7%' },
+    'ניתוח נתונים': { top: '85%', left: '53%' },
     'קופירייטינג': { top: '61.5%', left: '58%' },
-    'עיצוב קמפיינים': { top: '84.1%', left: '68%' },
-    'פיתוח תוכנה': { top: '106.7%', left: '63.5%' },
+    'עיצוב קמפיינים': { top: '81%', left: '68%' },
+    'פיתוח תוכנה': { top: '100%', left: '63.5%' },
     'פיתוח ל - WEB': { top: '64.8%', left: '45%' },
   };
 
@@ -114,7 +114,7 @@ const VolunteeringSection = () => {
           </span>
         </div>
       </div>
-      <div ref={ref} className="flex flex-wrap justify-center m-0 relative w-full h-48">
+      <div ref={ref} className="flex flex-wrap items-center m-0 relative w-full h-1/2">
         {volunteerFields.map((field, index) => {
           const x = Math.random() * 50 - 25; // Random number between -25 and 25
           const rotate = Math.random() * 30 - 15; // Random number between -15 and 15

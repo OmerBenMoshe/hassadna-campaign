@@ -18,7 +18,7 @@ const VolunteeringContainer: React.FC<VolunteeringContainerProps> =
                 <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className={`rounded-full text-l p-2 bg-${fieldColor} border-none pl-10 pr-10 m-0.5`}
+                    className={`rounded-full text-l p-2 ${fieldColor} border-none pl-10 pr-10 m-0.5`}
                     onClick={() => (modalOpen ? close() : open(volunteerField))}
                 >
                     <span dir="rtl" className="text-white">{volunteerField}</span>

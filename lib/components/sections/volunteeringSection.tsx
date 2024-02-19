@@ -40,22 +40,29 @@ const VolunteeringSection = () => {
   type fieldColorType = { [key: string]: string };
 
   const fieldColor: fieldColorType = {
-    'עיצוב גרפי': 'darkGray',
-    'ניהול פרויקט': 'orange',
-    'ניהול מערכות מידע': 'neon',
-    'עיצוב חווית משתמש': 'darkGray',
-    'אינפוגרפיקה': 'blue',
-    'ניהול מוצר': 'orange',
-    'ניתוח נתונים': 'blue',
-    'קופירייטינג': 'darkGray',
-    'עיצוב קמפיינים': 'orange',
-    'פיתוח תוכנה': 'neon',
-    'פיתוח ל - WEB': 'neon'
+    'עיצוב גרפי': 'bg-darkGray',
+    'ניהול פרויקט': 'bg-orange',
+    'ניהול מערכות מידע': 'bg-neon',
+    'עיצוב חווית משתמש': 'bg-darkGray',
+    'אינפוגרפיקה': 'bg-purple',
+    'ניהול מוצר': 'bg-orange',
+    'ניתוח נתונים': 'bg-purple',
+    'קופירייטינג': 'bg-darkGray',
+    'עיצוב קמפיינים': 'bg-orange',
+    'פיתוח תוכנה': 'bg-neon',
+    'פיתוח ל - WEB': 'bg-neon'
   };
 
-  type fieldPositions = { [key: string]: string };
+  type FieldPosition = {
+    top: string;
+    left: string;
+  };
+  
+  type Positions = {
+    [key: string]: FieldPosition;
+  };
 
-  const positions = {
+  const positions: Positions = {
     'עיצוב גרפי': { top: '83%', left: '11.5%' },
     'ניהול פרויקט': { top: '106.7%', left: '20%' },
     'ניהול מערכות מידע': { top: '88%', left: '24.1%' },
@@ -116,13 +123,11 @@ const VolunteeringSection = () => {
       </div>
       <div ref={ref} className="flex flex-wrap justify-center m-0 relative w-full h-48">
         {volunteerFields.map((field, index) => {
-          const x = Math.random() * 50 - 25; // Random number between -25 and 25
-          const rotate = Math.random() * 30 - 15; // Random number between -15 and 15
+          const x = Math.random() * 50 - 25;
 
-          // @ts-ignore
           const position = positions[field];
           // Set a fixed width for each element
-          const width = 250; // Adjust as needed
+          const width = 250; 
 
           return (
             <motion.div
@@ -156,8 +161,8 @@ const VolunteeringSection = () => {
         onExitComplete={() => null}
       >
 
-        {modalOpen && // @ts-ignore
-          <Notification modalOpen={modalOpen}
+        {modalOpen &&
+          <Notification
             handleClose={close}
             projects={neededProjects[activeField as string]}
             volunteerField={activeField as string} />}

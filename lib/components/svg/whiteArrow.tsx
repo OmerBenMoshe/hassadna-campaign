@@ -1,6 +1,6 @@
 const WhiteArrowSVG = ({ ...rest }) => (
     <svg
-      width="150"
+      width="100"
       height="74"
       viewBox="0 0 150 74"
       fill="none"

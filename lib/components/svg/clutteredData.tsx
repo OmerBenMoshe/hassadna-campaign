@@ -1,7 +1,7 @@
 const ClutteredDataSVG = ({...rest}) => (
     <svg 
-        width="325" //588
-        height="270" //490
+        width="385" //588
+        height="320" //490
         viewBox="0 0 588 490" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"

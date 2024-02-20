@@ -2,7 +2,7 @@
 
 import OrangeArrowSVG from "../svg/orangeArrow";
 
-export default function WhoWeAreSection({colors}: {colors: string}) {
+export default function WhoSection({colors}: {colors: string}) {
   return (
     <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition`}>
       <div

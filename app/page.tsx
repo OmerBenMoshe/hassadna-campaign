@@ -1,6 +1,7 @@
 "use client";
 import ImpactSection from "@/lib/components/sections/impactSection";
-import WhoWeAreSection from "@/lib/components/sections/whoWeAreSection";
+import WhoSection from "@/lib/components/sections/whoSection";
+import WhatSection from "@/lib/components/sections/whatSection";
 import WhySection from "@/lib/components/sections/whySection";
 import WebsiteScreen from "@/lib/components/website-screen";
 import VolunteeringSection from '@/lib/components/sections/volunteeringSection';
@@ -22,15 +23,15 @@ export default function Home() {
         setColors(SECTION_COLORS[focusedSection]);
     };
   return (
-      <WebsiteScreen
-          colors={colors}
-          onScroll={handleScroll}
-          className="h-screen overflow-auto"
-      >
-          <WhoWeAreSection colors={colors} />
-          <WhySection colors={colors} />
-          <ImpactSection colors={colors} />
-      <VolunteeringSection />
+    <WebsiteScreen
+      colors={colors}
+      onScroll={handleScroll}
+      className="h-screen overflow-auto"
+    >
+      <WhoSection colors={colors} />
+      <WhatSection colors={colors} />
+      <WhySection colors={colors} />
+      <ImpactSection colors={colors} />
     </WebsiteScreen>
   );
 }

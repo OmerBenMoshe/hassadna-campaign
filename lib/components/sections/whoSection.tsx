@@ -1,10 +1,8 @@
 "use client";
 
-import PendulumSVG from "../svg/pendulum";
 import OrangeArrowSVG from "../svg/orangeArrow";
-import Image from "next/image";
 
-export default function WhoWeAreSection({colors}: {colors: string}) {
+export default function WhoSection({colors}: {colors: string}) {
   return (
     <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition`}>
       <div

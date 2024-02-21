@@ -7,7 +7,7 @@ import Notification from "../Backdrop/Notification";
 import { useInView } from 'react-intersection-observer';
 
 
-const VolunteeringSection = () => {
+const VolunteeringSection = ({colors} : {colors: string}) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeField, setActiveField] = useState('' as String);
 
@@ -104,9 +104,9 @@ const VolunteeringSection = () => {
 
 
   return (
-    <section className="flex flex-col items-start justify-around bg-white h-[calc(100vh-88px)]">
+    <section className={`flex flex-col items-start justify-around h-[calc(100vh-88px)] transition ${colors}`}>
       <div dir={"rtl"} className="flex items-center justify-center space-x-20">
-        <div className="text-8xl text-bold font-primary inline-block pl-20">
+        <div className="inline-block pl-20 text-8xl text-bold font-primary">
           # תחומי התנדבות
         </div>
         <div className="flex flex-col justify-center">
@@ -121,7 +121,7 @@ const VolunteeringSection = () => {
           </span>
         </div>
       </div>
-      <div ref={ref} className="flex flex-wrap items-center m-0 relative w-full h-1/2">
+      <div ref={ref} className="relative flex flex-wrap items-center w-full m-0 h-1/2">
         {volunteerFields.map((field, index) => {
           const x = Math.random() * 50 - 25;
 
@@ -148,7 +148,7 @@ const VolunteeringSection = () => {
           );
         })}
       </div>
-      <hr className="border-t-2 border-black w-full" />
+      <hr className="w-full border-t-2 border-black" />
       <AnimatePresence
         // Disable any initial animations on children that
         // are present when the component is first rendered

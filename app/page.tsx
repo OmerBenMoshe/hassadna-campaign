@@ -9,7 +9,7 @@ import { LIGHT_COLORS, DARK_COLORS } from "@/lib/config";
 import { useState } from "react";
 
 const AMOUNT_OF_SECTIONS = 2;
-const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS];
+const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS, LIGHT_COLORS];
 
 export default function Home() {
     const [colors, setColors] = useState(SECTION_COLORS[0]);
@@ -32,7 +32,7 @@ export default function Home() {
       <WhatSection colors={colors} />
       <WhySection colors={colors} />
       <ImpactSection colors={colors} />
-      <VolunteeringSection/>
+      <VolunteeringSection colors={colors}/>
     </WebsiteScreen>
   );
 }

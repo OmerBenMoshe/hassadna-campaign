@@ -5,7 +5,7 @@ const ImpactSection = ({colors}: {colors: string}) => {
   return (
     <section
       dir={"rtl"}
-      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 transition ${colors}`}
+      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 transition snap-center ${colors}`}
     >
       <div className={"flex"}>
         <div className="flex items-center w-3/5">

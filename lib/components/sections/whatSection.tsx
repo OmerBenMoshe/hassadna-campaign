@@ -7,7 +7,7 @@ import OrganisedDataSVG from "../svg/organisedData";
 export default function WhatSection({colors}: {colors: string}) {
   return (
     // <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition justify-end`}></section>
-    <section className={`flex flex-col justify-center h-[calc(100vh-88px)] transition ${colors}`}>
+    <section className={`flex flex-col justify-center h-[calc(100vh-88px)] transition ${colors} snap-center`}>
       <div
         dir={"rtl"}
         className="flex items-center mr-20 text-7xl text-bold font-primary">

@@ -4,7 +4,7 @@ import OrangeArrowSVG from "../svg/orangeArrow";
 
 export default function WhoSection({colors}: {colors: string}) {
   return (
-    <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition`}>
+    <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
         className="flex flex-col items-start justify-center space-t-20"

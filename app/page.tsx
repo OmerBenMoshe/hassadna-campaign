@@ -26,7 +26,7 @@ export default function Home() {
     <WebsiteScreen
       colors={colors}
       onScroll={handleScroll}
-      className="h-screen overflow-auto"
+      className="h-screen overflow-auto snap-y snap-mandatory"
     >
       <WhoSection colors={colors} />
       <WhatSection colors={colors} />

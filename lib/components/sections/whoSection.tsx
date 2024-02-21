@@ -10,9 +10,9 @@ export default function WhoSection({colors}: {colors: string}) {
         className="flex flex-col items-start justify-center space-t-20"
       >
         <div className="flex">
-            <div className="text-8xl text-bold font-primary flex">
+            <div className="flex text-8xl text-bold font-primary">
             היי!
-            <span className="pt-3 px-5">
+            <span className="px-5 pt-3">
                 <OrangeArrowSVG/>
             </span>
             אנחנו  
@@ -29,7 +29,7 @@ export default function WhoSection({colors}: {colors: string}) {
             </span>
             <br />
             ואנחנו אוהבים = 
-            <span className="text-orange pr-3">
+            <span className="pr-3 text-orange">
                 DATA
             </span>
             ;

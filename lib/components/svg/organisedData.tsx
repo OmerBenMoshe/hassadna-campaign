@@ -1,7 +1,6 @@
 const OrganisedDataSVG = ({ ...rest}) => (
     <svg 
-        width="385" //588
-        height="320" //490
+        {...rest}
         viewBox="0 0 587 490" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"

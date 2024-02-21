@@ -104,7 +104,7 @@ const VolunteeringSection = ({colors} : {colors: string}) => {
 
 
   return (
-    <section className={`flex flex-col items-start justify-around h-[calc(100vh-88px)] transition ${colors}`}>
+    <section className={`flex flex-col items-start justify-around h-[calc(100vh-88px)] overflow-x-hidden transition ${colors}`}>
       <div dir={"rtl"} className="flex items-center justify-center space-x-20">
         <div className="inline-block pl-20 text-8xl text-bold font-primary">
           # תחומי התנדבות

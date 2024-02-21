@@ -32,6 +32,7 @@ export default function Home() {
       <WhatSection colors={colors} />
       <WhySection colors={colors} />
       <ImpactSection colors={colors} />
+      <VolunteeringSection/>
     </WebsiteScreen>
   );
 }

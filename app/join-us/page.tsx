@@ -8,7 +8,7 @@ import Title from './form/Title';
 
   export default function page() {
   return (
-    <main className={'bg-purple min-h-screen flex flex-col p-6 space-y-8'}>
+    <main className={'bg-purple min-h-screen flex flex-col p-6 space-y-14'}>
       <div className='flex justify-start'><button className={'bg-orange text-white shadow-sharp rounded-full border-none hover:bg-neon hover:text-darkGray transition px-4'}>חזרה לעמוד</button></div>
       <div className={'flex justify-center'}><Title /></div>
       <section dir={'rtl'} className='grid grid-cols-3 gap-x-20'>
@@ -45,7 +45,7 @@ import Title from './form/Title';
           <SelectButton className={'col-span-1'}>ניהול פרויקט</SelectButton>
         </div>
       </section>
-      <section dir={'rtl'}>
+      <section dir={'rtl'} className={'space-y-5'}>
         <SubTitle>באילו פרויקטים תשמחו להשתתף?</SubTitle>
         <div className={'flex justify-between'}>
           <Checkbox label={"ספר החוקים הפתוח"} />
@@ -57,12 +57,12 @@ import Title from './form/Title';
         </div>
       </section>
       <section dir={'rtl'} className='flex'>
-        <div className='flex flex-col grow-[3]'>
+        <div className='flex flex-col grow-[3] min-h-40'>
           <SubTitle>לפני שנסיים, האם יש לכם.ן שאלות נוספות?</SubTitle>
           <TextArea />
         </div>
         <div className={'grow-[1] flex items-center justify-center'}>
-          <button className={'bg-neon shadow-sharp rounded-full border-none hover:bg-orange hover:text-white text-darkGray font-bold transition px-32 py-4'}>שליחת השאלון</button>
+          <button className={'bg-neon shadow-sharp rounded-full border-none hover:bg-orange hover:text-white text-darkGray font-bold transition px-24 py-3'}>שליחת השאלון</button>
         </div>
       </section>
     </main>

@@ -8,11 +8,11 @@ module.exports = {
       },
     },
     colors: {
-      orange: "#FFA42C",
-      neon: "#28FFE6",
-      darkGray: "#303A3A",
+      orange: "#FE7833",
+      neon: "#29FFC7",
+      darkGray: "#1F2725",
       white: "#FCFCF8",
-      purple: "#6C22E5",
+      purple: "#7C2BDB",
     },
     fontFamily: {
       primary: "Anomalia",

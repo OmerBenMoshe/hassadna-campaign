@@ -1,10 +1,14 @@
 'use client';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import Title from './form/Title';
 import JoinProjects from './sections/JoinProjects';
 import LastDetails from './sections/LastDetails';
 import ProfSkills from './sections/ProfSkills';
 import UserDetails from './sections/UserDetails';
+
+export type FormStateType = {
+  formData: [FormData, Dispatch<SetStateAction<FormData>>];
+};
 
 export type FormData = {
   personal: {
@@ -49,9 +53,9 @@ export default function page() {
       <div className='flex justify-start'><button className={'bg-orange text-white shadow-sharp rounded-full border-none hover:bg-neon hover:text-darkGray transition px-4'}>חזרה לעמוד</button></div>
       <div className={'flex justify-center'}><Title /></div>
       <UserDetails formData={[formData, setFormData]}/>
-      <ProfSkills />
+      <ProfSkills formData={[formData, setFormData]}/>
       <JoinProjects formData={[formData, setFormData]}/>
-      <LastDetails />
+      <LastDetails formData={[formData, setFormData]}/>
     </main>
   );
 }

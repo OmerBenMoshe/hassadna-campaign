@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SelectButton = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+const SelectButton = ({ isSelected, children, className, ...rest }: { isSelected:boolean, children: React.ReactNode, className?: string, onClick?:(e:any) => void }) => {
     return (
-        <button className={`font-bold bg-white text-darkGray p-3 border-none rounded-full hover:bg-neon text-sm xl:text-lg {...className}`}>{children}</button>
+        <button className={`font-bold p-3 border-none rounded-full text-sm xl:text-lg transition-all ${isSelected ? 'bg-orange text-white' : 'bg-white text-darkGray hover:bg-neon'}  {...className}`} {...rest}>{children}</button>
     );
 };
 

@@ -2,13 +2,10 @@ import { Dispatch, SetStateAction } from "react";
 import SubTitle from "../form/SubTitle";
 import TextArea from "../form/TextArea";
 import TextInput from "../form/TextInput";
-import { FormData } from "../page";
+import { FormData, FormStateType } from "../page";
 
-type UserDetailsProps = {
-    formData: [FormData, Dispatch<SetStateAction<FormData>>];
-};
 
-const UserDetails = ({ formData: [formData, setFormData] }: UserDetailsProps) => {
+const UserDetails = ({ formData: [formData, setFormData] }: FormStateType) => {
     const { fullName, email, linkedin } = formData.personal;
     const { course, bachelor, master, extraInfo } = formData.educational;
 

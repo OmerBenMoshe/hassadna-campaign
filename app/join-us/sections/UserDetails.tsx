@@ -12,7 +12,7 @@ const UserDetails = ({ formData: [formData, setFormData] }: FormStateType) => {
     return (
         <section dir={"rtl"} className="grid grid-cols-3 gap-x-20">
             <div className="flex flex-col col-span-1">
-                <SubTitle>פרטים אישיים</SubTitle>
+                <SubTitle>פרטים אישיים*</SubTitle>
                 <TextInput
                     placeholder="שם מלא*"
                     value={fullName}

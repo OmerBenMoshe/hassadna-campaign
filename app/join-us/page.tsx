@@ -1,5 +1,7 @@
 "use client";
 import { Dispatch, SetStateAction, useState } from "react";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+import Realistic from "react-canvas-confetti/dist/presets/realistic"
 import Title from "./form/Title";
 import JoinProjects from "./sections/JoinProjects";
 import LastDetails from "./sections/LastDetails";
@@ -68,8 +70,10 @@ const validateForm = (formData: FormData) => {
 export default function page() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [validationErrors, setValidationErrors] = useState<string[]>([])
+  const [isConfetti, setIsConfetti] = useState<boolean>(false)
 
   const onFormSubmit = async () => {
+    setIsConfetti(true)
     const validation = validateForm(formData)
     if (validation.length) {
       setValidationErrors(validation)
@@ -105,6 +109,11 @@ export default function page() {
         onFormSubmit={onFormSubmit}
         validationErrors={validationErrors}
       />
+      {isConfetti && <>
+        <Fireworks autorun={{ speed: 1.5 }} />
+        <Realistic autorun={{ speed: 0.8 }} />
+      </>}
+
     </main>
   );
 }

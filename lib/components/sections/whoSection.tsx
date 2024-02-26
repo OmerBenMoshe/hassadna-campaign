@@ -5,7 +5,8 @@ import PurpleBracketSVG from "../svg/purpleBracket";
 
 export default function WhoSection({colors}: {colors: string}) {
   return (
-    <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    // <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    <section className={`flex justify-around ${colors} h-screen transition snap-center`}>
       <div
         dir={"rtl"}
         className="flex flex-col items-start justify-center space-t-20"

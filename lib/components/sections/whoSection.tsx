@@ -1,6 +1,7 @@
 "use client";
 
 import OrangeArrowSVG from "../svg/orangeArrow";
+import PurpleBracketSVG from "../svg/purpleBracket";
 
 export default function WhoSection({colors}: {colors: string}) {
   return (
@@ -10,24 +11,29 @@ export default function WhoSection({colors}: {colors: string}) {
         className="flex flex-col items-start justify-center space-t-20"
       >
         <div className="flex">
-            <div className="flex text-8xl text-bold font-primary">
+            <div className="flex text-8.5xl text-bold font-primary leading-none pl-4">
             היי!
-            <span className="px-5 pt-3">
+            <span className="px-6 pt-4">
                 <OrangeArrowSVG/>
             </span>
             אנחנו  
             </div>
-            <div className="text-l font-secondary w-[150px] h-[80px] pt-3 pr-3">
-                עמותה שפועלת 
-                כחממה טכנולוגית 
+            <div className="text-lg font-secondary font-450 pt-4 pr-10 leading-snug">
+                עמותה שפועלת <br/>
+                כחממה טכנולוגית <br/>
                 למיזמי קוד פתוח
             </div>
         </div>
-        <div className="text-8xl text-bold font-primary">
-            <span className="text-purple">
-            &lt;הסדנא לידע ציבורי&gt;
-            </span>
-            <br />
+        <div className="text-8.5xl text-bold font-primary leading-none">
+            <div className="flex text-purple leading-none">
+              <span className="leading-none transform scale-x-[-1] pt-6 pr-4">
+                <PurpleBracketSVG/>
+              </span>
+            הסדנא לידע ציבורי
+            <span className="leading-none pt-6 pr-4">
+                <PurpleBracketSVG/>
+              </span>
+            </div>
             ואנחנו אוהבים = 
             <span className="pr-3 text-orange">
                 DATA

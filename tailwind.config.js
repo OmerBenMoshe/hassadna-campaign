@@ -6,6 +6,9 @@ module.exports = {
       boxShadow: {
         sharp: "0.25rem 0.25rem black",
       },
+      fontSize: {
+        '8.5xl': '7rem',
+      },
     },
     colors: {
       orange: "#FE7833",

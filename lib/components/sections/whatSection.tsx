@@ -22,7 +22,7 @@ export default function WhatSection({colors}: {colors: string}) {
 
       <div 
         dir={"rtl"}
-        className="flex justify-around py-10 mx-10" 
+        className="flex justify-center py-10 mx-10" 
         >
           <div className="flex flex-col items-center"> 
             <p className="text-lg">
@@ -32,7 +32,7 @@ export default function WhatSection({colors}: {colors: string}) {
               <ClutteredDataSVG width={'20vw'} height={'20vw'}/>
             </div>  
           </div>
-          <div className="flex items-center mb-10">
+          <div className="flex items-center mb-10 mx-10">
             <WhiteArrowSVG/>
           </div>
           <div className="flex flex-col items-center">

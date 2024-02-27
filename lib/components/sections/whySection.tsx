@@ -1,37 +1,53 @@
 "use client";
 
-import PendulumSVG from "../svg/pendulum";
+import WhiteBracketSVG from "../svg/whiteBracket";
+import Image from "next/image";
 
 export default function WhySection({colors}: {colors: string}) {
   return (
-    <section className={`flex justify-around ${colors} h-[calc(100vh-88px)] transition snap-center`}>
-      <PendulumSVG className={"h-screen-sm pb-10"} />
-
+    <section className={`flex justify-end ${colors} h-[calc(100vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
-        className="flex flex-col items-start justify-center space-y-20"
+        className="flex flex-col items-start justify-center"
       >
-        <div className="text-8xl text-bold font-primary">
-        &#47;&#47; למה אנחנו <br />
-          עושים את זה?
-        </div>
-        <p className="text-xl">
-          לכלים שלנו יש&nbsp;
-          <span
-            dir={"rtl"}
-            className="underline decoration-orange decoration-4"
-          >
-            אימפקט אמיתי!
+        <div className="flex items-center text-7xl mr-10 text-bold font-primary mb-20">
+          <span className="leading-none transform scale-x-[-1] pt-1 pr-5">
+            <WhiteBracketSVG/>
           </span>
-          <br />
-          הם מאפשרים שקיפות שלטונית, מעורבות אזרחית
-          <br />
-          ושיח ציבורי מבוסס נתונים.
-          <br />
-        </p>
-        <button className="p-2 px-8 text-3xl border-none rounded-full text-bold bg-orange font-primary">
-          לא מאמינים? הנה כמה דוגמאות &gt;&gt;&gt;
-        </button>
+          למה אנחנו עושים את זה?
+          <span className="leading-none transform pt-1 pr-5">
+            <WhiteBracketSVG/>
+          </span>
+        </div>
+
+        <div className="flex justify-between">
+          <div>
+            <p className="text-lg mr-10">
+              המטרה שלנו היא ליצור אימפקט בעולם האמיתי. <br/>
+              לאפשר שקיפות שלטונית, מעורבות אזרחית <br/>
+              ושיח ציבורי מבוסס נתונים. &nbsp;
+              <span
+                dir={"rtl"}
+                className="text-neon"
+              >
+                וזה עובד! <br/>
+                <br/>
+              </span>
+            </p> 
+            <p className="px-10 text-lg border-none text-bold">
+              לא מאמינים? הנה כמה דוגמאות &nbsp; &gt;&gt;&gt;
+            </p>
+          </div>
+
+          <div className="mr-20 pr-20 relative">
+            <Image 
+              src="/gif/pendulum.gif" 
+              alt="pendulum" 
+              width={600} 
+              height={50} 
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

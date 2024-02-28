@@ -9,6 +9,13 @@ module.exports = {
       fontSize: {
         '8.5xl': '7rem',
       },
+      borderRadius: {
+        '40': '40px'
+      },
+      width: {
+        '0.65': '65%',
+        '0.35': '35%'
+      },
     },
     colors: {
       orange: "#FE7833",

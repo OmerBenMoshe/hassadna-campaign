@@ -8,11 +8,10 @@ const ImpactSection = ({colors}: {colors: string}) => {
       className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 transition snap-center ${colors}`}
     >
       <div className={"flex"}>
-        <div className="flex items-center w-3/5">
-          <p className="text-xs text-left md:text-2xl">
+        <div className="flex items-center w-3/5 bg-white text-darkGray">
+          <p className="text-xl">
           בזכות ׳מפתח התקציב׳, הסדנא לידע ציבורי חשפה את נתיב המזומנים של הבית היהודי: ממשרד החינוך והסכמים קואליציוניים דרך האגף לתרבות יהודית לארגונים המקורבים למפלגה.
           </p>
-          <ArrowDownRightSVG className={"w-full mr-5"} />
         </div>
         <div className={"w-2/5"}></div>
       </div>
@@ -22,7 +21,6 @@ const ImpactSection = ({colors}: {colors: string}) => {
       <div className={"flex"}>
         <div className={"w-2/5"}></div>
         <div className="flex items-center w-3/5">
-          <ArrowDownLeftSVG className={"w-full ml-5"} />
           <p className="text-xs md:text-2xl">
             בזכות ׳ספר החוקים הפתוח׳ (בשיתוף עם עמותת ויקימדיה לישראל) פקודת
             &quot;הבטריקיה האורתודוכסית, 1941&quot; הובהרה כעדיין תקפה במאגר החקיקה

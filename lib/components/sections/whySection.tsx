@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function WhySection({colors}: {colors: string}) {
   return (
-    <section className={`flex justify-end ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    <section className={`flex justify-end ${colors} h-[calc(100vh-88px)] transition snap-center space-x-10`}>
       <div
         dir={"rtl"}
         className="flex flex-col items-start justify-center"
@@ -21,7 +21,7 @@ export default function WhySection({colors}: {colors: string}) {
         </div>
 
         <div className="flex justify-between">
-          <div>
+          <div className="w-2/3">
             <p className="text-lg mr-10">
               המטרה שלנו היא ליצור אימפקט בעולם האמיתי. <br/>
               לאפשר שקיפות שלטונית, מעורבות אזרחית <br/>
@@ -39,12 +39,13 @@ export default function WhySection({colors}: {colors: string}) {
             </p>
           </div>
 
-          <div className="mr-20 pr-20 relative">
+          {/* <div className="mr-20 pr-20 relative"> */}
+          <div className="w-1/3">
             <Image 
               src="/gif/pendulum.gif" 
               alt="pendulum" 
-              width={600} 
-              height={50} 
+              width={800} 
+              height={1000} 
             />
           </div>
         </div>

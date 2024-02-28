@@ -2,7 +2,7 @@ const ImpactSection = ({colors}: {colors: string}) => {
   return (
     <section
       dir={"rtl"}
-      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 transition snap-center overflow-x-hidden overflow-y-hidden ${colors}`}
+      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 pb-5 transition snap-center overflow-x-hidden overflow-y-hidden ${colors}`}
     >
   
       <div className={"flex mr-12"}>
@@ -45,7 +45,7 @@ const ImpactSection = ({colors}: {colors: string}) => {
             <span className="text-orange">
               &apos;ספר החוקים הפתוח&apos; &nbsp;
             </span>
-          (בשיתוף עם עמותת ויקימדיה לישראל) פקודת &quot;הבטריקיה האורתודוכסית, 1941&quot; הובהרה כעדיין תקפה במאגר החקיקה הלאומי, אחרי שמאגרי מידע אחרים טענו שהפקודה אינה בתוקף וכך הטעו את הפרקליטות ואת בית המשפט העליון.
+           פקודת &quot;הבטריקיה האורתודוכסית, 1941&quot; הובהרה כעדיין תקפה במאגר החקיקה הלאומי, אחרי שמאגרי מידע אחרים טענו שהפקודה אינה בתוקף וכך הטעו את הפרקליטות ואת בית המשפט העליון.
           </p>
           <a href="https://www.facebook.com/openlawil/posts/3073291326247722/" target="_blank"
             className="text-left text-darkGray hover:underline hover:decoration-orange decoration-2">

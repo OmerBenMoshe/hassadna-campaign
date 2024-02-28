@@ -7,6 +7,7 @@ import WebsiteScreen from "@/lib/components/website-screen";
 import VolunteeringSection from '@/lib/components/sections/volunteeringSection';
 import { LIGHT_COLORS, DARK_COLORS } from "@/lib/config";
 import { useState } from "react";
+import FiguresSection from "@/lib/components/sections/figuresSection";
 
 const AMOUNT_OF_SECTIONS = 2;
 const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS];
@@ -32,6 +33,7 @@ export default function Home() {
       <WhatSection colors={colors} />
       <WhySection colors={colors} />
       <ImpactSection colors={colors} />
+      <FiguresSection colors={colors} />
       <VolunteeringSection colors={colors}/>
     </WebsiteScreen>
   );

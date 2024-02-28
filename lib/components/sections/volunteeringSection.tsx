@@ -121,7 +121,7 @@ const VolunteeringSection = ({colors} : {colors: string}) => {
           </span>
         </div>
       </div>
-      <div ref={ref} className="relative flex flex-wrap items-center w-full m-0 h-1/2">
+      <div ref={ref} className="relative flex flex-wrap items-center w-full m-0 h-56">
         {volunteerFields.map((field, index) => {
           const x = Math.random() * 50 - 25;
 

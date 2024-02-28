@@ -1,12 +1,10 @@
-import ArrowDownLeftSVG from "../svg/arrowDownLeft";
-import ArrowDownRightSVG from "../svg/arrowDownRight";
-
 const ImpactSection = ({colors}: {colors: string}) => {
   return (
     <section
       dir={"rtl"}
-      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 transition snap-center ${colors}`}
+      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 transition snap-center overflow-x-hidden overflow-y-hidden ${colors}`}
     >
+  
       <div className={"flex mr-12"}>
         <div className="flex flex-col w-0.65 bg-white text-darkGray p-8 rounded-40 relative">
           <p className="text-lg">

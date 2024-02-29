@@ -56,7 +56,7 @@ const validateForm = (formData: FormData) => {
   const { personal, professional } = formData;
   let response = []
   if (!personal.fullName) {
-    response.push( 'חסר שם מלא,')
+    response.push('חסר שם מלא,')
   }
   if (!personal.email) {
     response.push('חסר כתובת אימייל')
@@ -67,7 +67,7 @@ const validateForm = (formData: FormData) => {
   return response
 }
 
-export default function page() {
+export default function Page() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [validationErrors, setValidationErrors] = useState<string[]>([])
   const [isConfetti, setIsConfetti] = useState<boolean>(false)
@@ -83,9 +83,9 @@ export default function page() {
 
     console.log("Form submitted", formData);
     const { data, error } = await supabase
-    .from('volunteer-form')
-    .insert([formData]);
-}
+      .from('volunteer-form')
+      .insert([formData]);
+  }
 
   return (
     <main className={"bg-purple min-h-screen flex flex-col p-6 space-y-14"}>

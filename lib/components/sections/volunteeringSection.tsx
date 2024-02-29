@@ -42,16 +42,16 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
 
   const fieldColor: fieldColorType = {
     'עיצוב גרפי': 'bg-darkGray',
-    'ניהול פרויקט': 'bg-orange text-black',
-    'ניהול מערכות מידע': 'bg-neon text-black',
+    'ניהול פרויקט': 'bg-orange text-darkGray',
+    'ניהול מערכות מידע': 'bg-neon text-darkGray',
     'עיצוב חווית משתמש': 'bg-darkGray',
     'אינפוגרפיקה': 'bg-purple',
-    'ניהול מוצר': 'bg-orange text-black',
+    'ניהול מוצר': 'bg-orange text-darkGray',
     'ניתוח נתונים': 'bg-purple',
     'קופירייטינג': 'bg-darkGray',
-    'עיצוב קמפיינים': 'bg-orange text-black',
-    'פיתוח תוכנה': 'bg-neon text-black',
-    'פיתוח ל - WEB': 'bg-neon text-black'
+    'עיצוב קמפיינים': 'bg-orange text-darkGray',
+    'פיתוח תוכנה': 'bg-neon text-darkGray',
+    'פיתוח ל - WEB': 'bg-neon text-darkGray'
   };
 
   type FieldPosition = {

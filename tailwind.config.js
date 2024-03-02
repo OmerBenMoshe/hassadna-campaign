@@ -30,10 +30,6 @@ module.exports = {
           '100%': { transform: 'translateX(0%)' },
         },
       },
-      backgroundImage:
-         {
-           'projects_background': "url('/projectsBackground.svg')"
-         }
     },
     colors: {
       orange: "#FE7833",

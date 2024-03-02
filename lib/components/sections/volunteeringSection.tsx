@@ -7,7 +7,8 @@ import Notification from "../Backdrop/Notification";
 import { useInView } from 'react-intersection-observer';
 
 
-const VolunteeringSection = ({colors} : {colors: string}) => {
+
+const VolunteeringSection = ({ colors }: { colors: string }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeField, setActiveField] = useState('' as String);
 
@@ -21,36 +22,36 @@ const VolunteeringSection = ({colors} : {colors: string}) => {
     'ניהול מוצר', 'ניתוח נתונים', 'קופירייטינג',
     'עיצוב קמפיינים', 'פיתוח תוכנה', 'פיתוח ל - WEB'];
 
-  type NeededProjectsType = { [key: string]: string[] };
+  type NeededProjectsType = { [key: string]: string };
 
   const neededProjects: NeededProjectsType = {
-    'עיצוב גרפי': ['פרוייקט 1', 'פרוייקט 2'],
-    'ניהול פרויקט': ['פרוייקט 3', 'פרוייקט 4'],
-    'ניהול מערכות מידע': ['פרוייקט 5', 'פרוייקט 6'],
-    'עיצוב חווית משתמש': ['פרוייקט 7', 'פרוייקט 8'],
-    'אינפוגרפיקה': ['פרוייקט 9', 'פרוייקט 10'],
-    'ניהול מוצר': ['פרוייקט 11', 'פרוייקט 12'],
-    'ניתוח נתונים': ['פרוייקט 13', 'פרוייקט 14'],
-    'קופירייטינג': ['פרוייקט 15', 'פרוייקט 16'],
-    'עיצוב קמפיינים': ['פרוייקט 17', 'פרוייקט 18'],
-    'פיתוח תוכנה': ['פרוייקט 19', 'פרוייקט 20'],
-    'פיתוח ל - WEB': ['פרוייקט 21', 'פרוייקט 22']
+    'עיצוב גרפי': 'ספר החוקים הפתוח',
+    'ניהול פרויקט': 'כנסת פתוחה',
+    'ניהול מערכות מידע': 'פנסיה פתוחה',
+    'עיצוב חווית משתמש': 'מפתח תקציב',
+    'אינפוגרפיקה': 'פנסיה פתוחה',
+    'ניהול מוצר': 'דאטאבוס',
+    'ניתוח נתונים': 'כנסת פתוחה',
+    'קופירייטינג': 'ספר החוקים הפתוח',
+    'עיצוב קמפיינים': 'פנסיה פתוחה',
+    'פיתוח תוכנה': 'כנסת פתוחה',
+    'פיתוח ל - WEB': 'דאטא סיטי'
   };
 
   type fieldColorType = { [key: string]: string };
 
   const fieldColor: fieldColorType = {
     'עיצוב גרפי': 'bg-darkGray',
-    'ניהול פרויקט': 'bg-orange',
-    'ניהול מערכות מידע': 'bg-neon',
+    'ניהול פרויקט': 'bg-orange text-darkGray',
+    'ניהול מערכות מידע': 'bg-neon text-darkGray',
     'עיצוב חווית משתמש': 'bg-darkGray',
     'אינפוגרפיקה': 'bg-purple',
-    'ניהול מוצר': 'bg-orange',
+    'ניהול מוצר': 'bg-orange text-darkGray',
     'ניתוח נתונים': 'bg-purple',
     'קופירייטינג': 'bg-darkGray',
-    'עיצוב קמפיינים': 'bg-orange',
-    'פיתוח תוכנה': 'bg-neon',
-    'פיתוח ל - WEB': 'bg-neon'
+    'עיצוב קמפיינים': 'bg-orange text-darkGray',
+    'פיתוח תוכנה': 'bg-neon text-darkGray',
+    'פיתוח ל - WEB': 'bg-neon text-darkGray'
   };
 
   type FieldPosition = {
@@ -63,31 +64,31 @@ const VolunteeringSection = ({colors} : {colors: string}) => {
   };
 
   const positions: Positions = {
-    'עיצוב גרפי': { top: '80%', left: '11.5%' },
-    'ניהול פרויקט': { top: '100%', left: '20%' },
-    'ניהול מערכות מידע': { top: '84%', left: '24.1%' },
-    'עיצוב חווית משתמש': { top: '75%', left: '33.7%' },
-    'אינפוגרפיקה': { top: '28%', left: '36.4%' },
-    'ניהול מוצר': { top: '100%', left: '40.7%' },
-    'ניתוח נתונים': { top: '85%', left: '53%' },
-    'קופירייטינג': { top: '61.5%', left: '58%' },
-    'עיצוב קמפיינים': { top: '81%', left: '68%' },
-    'פיתוח תוכנה': { top: '100%', left: '63.5%' },
-    'פיתוח ל - WEB': { top: '64.8%', left: '45%' },
+    'עיצוב גרפי': { top: '46.5%', left: '14.3%' },
+    'ניהול פרויקט': { top: '90%', left: '15%' },
+    'ניהול מערכות מידע': { top: '73%', left: '23%' },
+    'עיצוב חווית משתמש': { top: '56.5%', left: '33.7%' },
+    'אינפוגרפיקה': { top: '21.5%', left: '34.9%' },
+    'ניהול מוצר': { top: '90%', left: '45%' },
+    'ניתוח נתונים': { top: '77%', left: '58%' },
+    'קופירייטינג': { top: '33.5%', left: '65%' },
+    'עיצוב קמפיינים': { top: '61%', left: '73%' },
+    'פיתוח תוכנה': { top: '90%', left: '70%' },
+    'פיתוח ל - WEB': { top: '45%', left: '48%' },
   };
 
 
   type fieldRotations = { [key: string]: number };
 
   const rotations: fieldRotations = {
-    'עיצוב גרפי': -27,
+    'עיצוב גרפי': -45,
     'ניהול פרויקט': 0,
     'ניהול מערכות מידע': 30,
-    'עיצוב חווית משתמש': 10,
-    'אינפוגרפיקה': -33,
+    'עיצוב חווית משתמש': 7,
+    'אינפוגרפיקה': -5,
     'ניהול מוצר': 0,
-    'ניתוח נתונים': -20,
-    'קופירייטינג': 5.5,
+    'ניתוח נתונים': -33,
+    'קופירייטינג': -5,
     'עיצוב קמפיינים': 0,
     'פיתוח תוכנה': 0,
     'פיתוח ל - WEB': 27
@@ -104,51 +105,47 @@ const VolunteeringSection = ({colors} : {colors: string}) => {
 
 
   return (
-    <section className={`flex flex-col items-start justify-around h-[calc(100vh-88px)] overflow-x-hidden transition snap-center ${colors}`}>
-      <div dir={"rtl"} className="flex items-center justify-center space-x-20">
-        <div className="inline-block pl-20 text-8xl text-bold font-primary">
-          # תחומי התנדבות
+    <section className={`flex flex-col m-0 p-0 items-start justify-top h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
+      <div dir={"rtl"} className="flex items-center justify-center">
+        <div className="inline-block pl-20 text-8xl text-bold font-primary whitespace-nowrap m-0 p-0 mt-[-2rem]">
+          &lt; תחומי התנדבות&gt;
         </div>
-        <div className="flex flex-col justify-center">
-          <span className="text-xl">
-            רואים את עצמכם באחד מהתחומים
+        <div className="flex flex-col justify-center mt-10 p-0">
+          <span className="text-l m-0 p-0">
+            הסנדא לידע ציבורי נעזרת במתנדבות ומתנדבים <br />מתחומים רבים על מנת לקדם את מטרת המיזם,<br />ונותנת להם כלים וניסיון שיעזרו להם.ן בעולם האמיתי!
           </span>
-          <span className="text-xl">
-            בתגיות למטה? לחצו עליה כדי לראות
-          </span>
-          <span className="text-xl">
-            איפה צריכים אתכם:
+          <br />
+          <span className="text-xl m-0 p-0">
+            &lt;&lt;&lt; לחצו על התגיות כדי לגלות איך אפשר לעזור
           </span>
         </div>
       </div>
-      <div ref={ref} className="relative flex flex-wrap items-center w-full m-0 h-56">
-        {volunteerFields.map((field, index) => {
-          const x = Math.random() * 50 - 25;
+      <div id="dropping-items" ref={ref} className="relative flex flex-wrap items-center w-[1200px] h-[224px] pb-[height_of_tallest_child] m-0  mx-auto left-0 right-0">        {volunteerFields.map((field, index) => {
+        const x = Math.random() * 50 - 25;
 
-          const position = positions[field];
-          // Set a fixed width for each element
-          const width = 250;
+        const position = positions[field];
+        // Set a fixed width for each element
 
-          return (
-            <motion.div
-              className="absolute"
-              style={{ top: position.top, left: position.left, width }}
-              key={index}
-              variants={containerVariants(x, rotations[field])}
-              initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
-            >
-              <VolunteeringContainer
-                modalOpen={modalOpen}
-                open={open}
-                close={close}
-                volunteerField={field}
-                fieldColor={fieldColor[field]} />
-            </motion.div>
-          );
-        })}
+        return (
+          <motion.div
+            className="absolute p-0 m-0 "
+            style={{ top: position.top, left: position.left }}
+            key={index}
+            variants={containerVariants(x, rotations[field])}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+          >
+            <VolunteeringContainer
+              modalOpen={modalOpen}
+              open={open}
+              close={close}
+              volunteerField={field}
+              fieldColor={fieldColor[field]} />
+          </motion.div>
+        );
+      })}
       </div>
-      <hr className="w-full border-t-2 border-black" />
+      <hr className="w-full border-t-2 border-black mt-11" />
       <AnimatePresence
         // Disable any initial animations on children that
         // are present when the component is first rendered
@@ -164,7 +161,7 @@ const VolunteeringSection = ({colors} : {colors: string}) => {
         {modalOpen &&
           <Notification
             handleClose={close}
-            projects={neededProjects[activeField as string]}
+            project={neededProjects[activeField as string]}
             volunteerField={activeField as string} />}
       </AnimatePresence>
     </section>

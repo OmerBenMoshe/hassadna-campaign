@@ -22,20 +22,20 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
     'ניהול מוצר', 'ניתוח נתונים', 'קופירייטינג',
     'עיצוב קמפיינים', 'פיתוח תוכנה', 'פיתוח ל - WEB'];
 
-  type NeededProjectsType = { [key: string]: string[] };
+  type NeededProjectsType = { [key: string]: string };
 
   const neededProjects: NeededProjectsType = {
-    'עיצוב גרפי': ['פרוייקט 1', 'פרוייקט 2'],
-    'ניהול פרויקט': ['פרוייקט 3', 'פרוייקט 4'],
-    'ניהול מערכות מידע': ['פרוייקט 5', 'פרוייקט 6'],
-    'עיצוב חווית משתמש': ['פרוייקט 7', 'פרוייקט 8'],
-    'אינפוגרפיקה': ['פרוייקט 9', 'פרוייקט 10'],
-    'ניהול מוצר': ['פרוייקט 11', 'פרוייקט 12'],
-    'ניתוח נתונים': ['פרוייקט 13', 'פרוייקט 14'],
-    'קופירייטינג': ['פרוייקט 15', 'פרוייקט 16'],
-    'עיצוב קמפיינים': ['פרוייקט 17', 'פרוייקט 18'],
-    'פיתוח תוכנה': ['פרוייקט 19', 'פרוייקט 20'],
-    'פיתוח ל - WEB': ['פרוייקט 21', 'פרוייקט 22']
+    'עיצוב גרפי': 'ספר החוקים הפתוח',
+    'ניהול פרויקט': 'כנסת פתוחה',
+    'ניהול מערכות מידע': 'פנסיה פתוחה',
+    'עיצוב חווית משתמש': 'מפתח תקציב',
+    'אינפוגרפיקה': 'פנסיה פתוחה',
+    'ניהול מוצר': 'דאטאבוס',
+    'ניתוח נתונים': 'כנסת פתוחה',
+    'קופירייטינג': 'ספר החוקים הפתוח',
+    'עיצוב קמפיינים': 'פנסיה פתוחה',
+    'פיתוח תוכנה': 'כנסת פתוחה',
+    'פיתוח ל - WEB': 'דאטא סיטי'
   };
 
   type fieldColorType = { [key: string]: string };
@@ -64,17 +64,17 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
   };
 
   const positions: Positions = {
-    'עיצוב גרפי': { top: '47.5%', left: '14.3%' },
-    'ניהול פרויקט': { top: '91%', left: '15%' },
-    'ניהול מערכות מידע': { top: '74%', left: '23%' },
-    'עיצוב חווית משתמש': { top: '57.5%', left: '33.7%' },
-    'אינפוגרפיקה': { top: '22.5%', left: '34.9%' },
-    'ניהול מוצר': { top: '91%', left: '45%' },
-    'ניתוח נתונים': { top: '78%', left: '58%' },
-    'קופירייטינג': { top: '34.5%', left: '65%' },
-    'עיצוב קמפיינים': { top: '62%', left: '73%' },
-    'פיתוח תוכנה': { top: '91%', left: '70%' },
-    'פיתוח ל - WEB': { top: '46%', left: '48%' },
+    'עיצוב גרפי': { top: '46.5%', left: '14.3%' },
+    'ניהול פרויקט': { top: '90%', left: '15%' },
+    'ניהול מערכות מידע': { top: '73%', left: '23%' },
+    'עיצוב חווית משתמש': { top: '56.5%', left: '33.7%' },
+    'אינפוגרפיקה': { top: '21.5%', left: '34.9%' },
+    'ניהול מוצר': { top: '90%', left: '45%' },
+    'ניתוח נתונים': { top: '77%', left: '58%' },
+    'קופירייטינג': { top: '33.5%', left: '65%' },
+    'עיצוב קמפיינים': { top: '61%', left: '73%' },
+    'פיתוח תוכנה': { top: '90%', left: '70%' },
+    'פיתוח ל - WEB': { top: '45%', left: '48%' },
   };
 
 
@@ -105,16 +105,17 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
 
 
   return (
-    <section className={`flex flex-col items-start justify-around h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
-      <div dir={"rtl"} className="flex items-center justify-center space-x-20">
-        <div className="inline-block pl-20 text-8xl text-bold font-primary whitespace-nowrap">
+    <section className={`flex flex-col m-0 p-0 items-start justify-top h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
+      <div dir={"rtl"} className="flex items-center justify-center">
+        <div className="inline-block pl-20 text-8xl text-bold font-primary whitespace-nowrap m-0 p-0 mt-[-2rem]">
           &lt; תחומי התנדבות&gt;
         </div>
-        <div className="flex flex-col justify-center">
-          <span className="text-l">
-            הסנדא לידע ציבורי נעזרת במתנדבות ומתנדבים מתחומים רבים על מנת לקדם את מטרת המיזם,<br/>ונותנת להם כלים וניסיון שיעזרו להם.ן בעולם האמיתי!
+        <div className="flex flex-col justify-center mt-10 p-0">
+          <span className="text-l m-0 p-0">
+            הסנדא לידע ציבורי נעזרת במתנדבות ומתנדבים <br />מתחומים רבים על מנת לקדם את מטרת המיזם,<br />ונותנת להם כלים וניסיון שיעזרו להם.ן בעולם האמיתי!
           </span>
-          <span className="text-xl">
+          <br />
+          <span className="text-xl m-0 p-0">
             &lt;&lt;&lt; לחצו על התגיות כדי לגלות איך אפשר לעזור
           </span>
         </div>
@@ -144,7 +145,7 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
         );
       })}
       </div>
-      <hr className="w-full border-t-2 border-black" />
+      <hr className="w-full border-t-2 border-black mt-11" />
       <AnimatePresence
         // Disable any initial animations on children that
         // are present when the component is first rendered
@@ -160,7 +161,7 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
         {modalOpen &&
           <Notification
             handleClose={close}
-            projects={neededProjects[activeField as string]}
+            project={neededProjects[activeField as string]}
             volunteerField={activeField as string} />}
       </AnimatePresence>
     </section>

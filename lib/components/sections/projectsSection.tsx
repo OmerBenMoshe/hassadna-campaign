@@ -5,12 +5,15 @@ import DatabusSVG from "../svg/databus";
 import LawsSVG from "../svg/laws";
 import OpenPensionSVG from "../svg/openPension";
 import OpenKnessetSVG from "../svg/openKnesset";
+import DataCitySVG from "../svg/dataCity";
+import BudgetSVG from "../svg/budget";
+
 
 export default function ProjectsSection({colors}: {colors: string}) {
 
   return (
     <section 
-      className={`relative flex flex-col ${colors} h-[calc(300vh-88px)] transition snap-center`}>
+      className={`relative flex flex-col ${colors} h-[calc(375vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
         className="sticky top-10 z-1 flex items-center text-7xl text-bold font-primary mx-10">
@@ -23,7 +26,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
           </span>
       </div>
 
-      <div className="flex z-2">
+      <div className="flex z-2 absolute w-full mt-20">
         <div 
           dir={"rtl"}
           className="flex flex-col items-center text-lg gap-2 m-10 z-5 w-1/2 gap-56 pt-24">
@@ -99,7 +102,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
               <OpenKnessetSVG/>
             </div>
             <a 
-              href="https://open-bus-map-search.hasadna.org.il/dashboard" 
+              href="https://oknesset.org/" 
               target="_blank"
               className="font-bold text-darkGray hover:underline hover:decoration-orange decoration-2">
               <br/>
@@ -116,40 +119,40 @@ export default function ProjectsSection({colors}: {colors: string}) {
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
             <div className="flex w-[120px] h-[50px] items-center justify-center mr-14 mt-12">
-              <OpenPensionSVG/>
+              <DataCitySVG/>
             </div>
             <a 
-              href="https://www.openpension.org.il/" 
+              href="https://data-city.my.canva.site/" 
               target="_blank"
               className="font-bold text-darkGray hover:underline hover:decoration-orange decoration-2">
               <br/>
-              פנסיה פתוחה
+              דאטא סיטי
             </a>
             <p className="flex font-normal text-darkGray leading-none ">
             <br/>
-            אתר המציג פירוט על ניהול אפיקי השקעות של קופות הפנסיה והגמל, כולל מידע והשוואה של הקצאת נכסים של קופות וניתוח הנתונים על ציר זמן.
+            הנגשת מידע ונתונים ממשלתיים לרשויות מקומיות למטרת יצירת פרויקטים עירוניים וקידום יזמות דיגיטלית במרחב העירוני.
             </p>
-            <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
+            <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
               הצטרפו לפרויקט
             </button>
           </div>
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
-            <div className="flex w-[75px] h-[75px] items-center justify-center mr-20 mt-12 -mb-4">
-              <LawsSVG/>
+            <div className="flex w-[125px] h-[125px] items-center justify-center mr-14 mt-10 -mb-8">
+              <BudgetSVG/>
             </div>
             <a 
-              href="https://he.wikisource.org/wiki/%D7%95%D7%99%D7%A7%D7%99%D7%98%D7%A7%D7%A1%D7%98:%D7%A1%D7%A4%D7%A8_%D7%94%D7%97%D7%95%D7%A7%D7%99%D7%9D_%D7%94%D7%A4%D7%AA%D7%95%D7%97" 
+              href="https://next.obudget.org/" 
               target="_blank"
               className="font-bold text-darkGray hover:underline hover:decoration-orange decoration-2">
               <br/>
-              ספר החוקים הפתוח
+              מפתח תקציב
             </a>
             <p className="flex font-normal text-darkGray leading-none ">
             <br/>
-            מיזם הפועל באתר האינטרנט ׳ויקיטקסט׳ שנועד לרכז ולהנגיש את חוקי מדינת ישראל בנוסח עדכני ופשוט להבנה.
+            אתר שנועד להנגיש את נתוני תקציב המדינה, בדגש על התחלקות התקציב בין משרדים, השתנות התקציב השנתי והוצאות כלכליות במהלך השנה.
             </p>
-            <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
+            <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
               הצטרפו לפרויקט
             </button>
           </div>

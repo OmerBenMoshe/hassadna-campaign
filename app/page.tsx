@@ -11,7 +11,7 @@ import FiguresSection from "@/lib/components/sections/figuresSection";
 import ProjectsSection from "@/lib/components/sections/projectsSection";
 
 const AMOUNT_OF_SECTIONS = 2;
-const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS];
+const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS];
 
 export default function Home() {
   const [colors, setColors] = useState(SECTION_COLORS[0]);

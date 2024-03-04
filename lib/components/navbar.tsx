@@ -25,7 +25,7 @@ export default function Navbar({ colors }: { colors: string }) {
       <Link href="/join-us">
         <button
           className={
-            "m-0 pl-4 pr-4 pt-1 pb-1 rounded-full text-l text-bold p-2 bg-orange shadow-sharp border-none"
+            "m-0 ml-10 pl-4 pr-4 pt-1 pb-1 rounded-full text-l text-bold p-2 bg-orange shadow-sharp border-none"
           }
         >
           <span dir="rtl" className="text-white">הצטרפו אלינו! </span>
@@ -35,10 +35,10 @@ export default function Navbar({ colors }: { colors: string }) {
         <Link href="/" className={linkClasses}>
           עובדים איתנו
         </Link>
-        <Link href="/about" className={linkClasses}>
+        <Link href="/" onClick={(e) => scrollToSection(e, 'projectSection')} className={linkClasses}>
           הפרויקטים שלנו
         </Link>
-        <Link href="/" onClick={(e) => scrollToSection(e, 'whoSection')} className={linkClasses}>
+        <Link  href="/" onClick={(e) => scrollToSection(e, 'whoSection')} className={linkClasses}>
           מי אנחנו
         </Link>
 

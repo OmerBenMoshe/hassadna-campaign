@@ -38,7 +38,9 @@ export default function Home() {
       <ImpactSection colors={colors} />
       <FiguresSection colors={colors} />
       <VolunteeringSection colors={colors} />
-      <ProjectsSection colors={colors} />
+      <div id="projectSection">
+        <ProjectsSection colors={colors} />
+      </div>
     </WebsiteScreen>
   );
 }

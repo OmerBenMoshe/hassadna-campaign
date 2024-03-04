@@ -3,6 +3,8 @@
 import BlackBracketSVG from "@/lib/components/svg/blackBracket"; 
 import Image from "next/image";
 import { useState } from "react";
+import ReactModal from "react-modal";
+import { motion } from "framer-motion";
 
 const yadHanadiv = '/images/yad_hanadiv.svg';
 const civilRightsG = '/images/civil_rights_g.svg';
@@ -20,6 +22,7 @@ const matachC = "/images/matach_c.svg";
 const googleG = "/images/google_g.svg";
 const googleC = "/images/google_c.svg";
 
+
 export default function PartnersSection({colors}: {colors: string}) {
     const [isCivilRightsHovered, setIsCivilRightsHovered] = useState(false);
     const [isUnHovered, setIsUnHovered] = useState(false);
@@ -28,7 +31,18 @@ export default function PartnersSection({colors}: {colors: string}) {
     const [isMigdalHovered, setIsMigdalHovered] = useState(false);
     const [isMatachHovered, setIsMatachHovered] = useState(false);
     const [isGoogleHovered, setIsGoogleHovered] = useState(false);
-    
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [partner, setPartner] = useState('');
+
+    const handleImageClick = (partner: string) => {
+        setPartner(partner);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
   return (
     <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
@@ -51,6 +65,7 @@ export default function PartnersSection({colors}: {colors: string}) {
                 alt="yad hanadiv"
                 width={125} //228
                 height={75} //36
+                onClick={() => handleImageClick('yad hanadiv')}
             />
             <Image
                 src={isCivilRightsHovered ? civilRightsC : civilRightsG}
@@ -59,6 +74,7 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={55} //36
                 onMouseEnter={() => setIsCivilRightsHovered(true)}
                 onMouseLeave={() => setIsCivilRightsHovered(false)}
+                onClick={() => handleImageClick('civil rights')}
             />
             <Image
                 src={isUnHovered ? unC : unG}
@@ -70,7 +86,7 @@ export default function PartnersSection({colors}: {colors: string}) {
             />
             <Image
                 src={isVanLeerHovered ? vanLeerC : vanLeerG}
-                alt="un"
+                alt="van leer"
                 width={175} //228
                 height={100} //36
                 onMouseEnter={() => setIsVanLeerHovered(true)}
@@ -113,7 +129,23 @@ export default function PartnersSection({colors}: {colors: string}) {
         </div>
       </div>
 
-    
+      <ReactModal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Image Modal"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
+        className="bg-white rounded-lg outline-none p-6 w-4/5 md:w-1/2"
+        >
+        <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="rounded-full text-l font-semibold p-2 border-0 pl-10 pr-10 m-0.5 h-[65px]"
+            onClick={closeModal}
+        >
+            <span dir="rtl">{partner}</span>
+        </motion.button>
+        </ReactModal>
+
     </section>
   );
 }

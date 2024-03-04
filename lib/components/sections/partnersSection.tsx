@@ -3,8 +3,8 @@
 import BlackBracketSVG from "@/lib/components/svg/blackBracket"; 
 import Image from "next/image";
 import { useState } from "react";
-import ReactModal from "react-modal";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import PartnershipInfo from "../Backdrop/partnershipInfo";
 
 const yadHanadiv = '/images/yad_hanadiv.svg';
 const civilRightsG = '/images/civil_rights_g.svg';
@@ -32,17 +32,30 @@ export default function PartnersSection({colors}: {colors: string}) {
     const [isMatachHovered, setIsMatachHovered] = useState(false);
     const [isGoogleHovered, setIsGoogleHovered] = useState(false);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [partner, setPartner] = useState('');
+    const [modalOpen, setModalOpen] = useState(false);
+    const [activeField, setActiveField] = useState('' as String);
 
-    const handleImageClick = (partner: string) => {
-        setPartner(partner);
-        setIsModalOpen(true);
-    };
+    const close = () => setModalOpen(false);
+    const open = (field: String) => {
+        setActiveField(field);
+        setModalOpen(true);
+    }
+    const PartnersField = ['קרן יד הנדיב', 'האגודה לזכויות האזרח בישראל',
+        'המרכז לטכנולוגיה חינוכית (מט"ח)', 'מכון ון ליר', 'הקרן החדשה לישראל',
+        'האיחוד האירופי', 'קבוצת מגדל', 'גוגל ישראל'];
 
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
+    type Description = { [key: string]: string };
+
+    const Partners: Description = {
+        'קרן יד הנדיב': '100,000 ש"ח תמיכה כללית',
+        'האגודה לזכויות האזרח בישראל': '283,816 לפרויקט ליישום המלצות דו"ח פלמור',
+        'המרכז לטכנולוגיה חינוכית (מט"ח)': '42,712 ש"ח, תשלום אחרון לפרויקט החוויה הדמוקר',
+        'מכון ון ליר': '211,661 ש"ח להקמת מרכז ידע לאומי בנושא נשים ומגדר',
+        'הקרן החדשה לישראל': '104,654 ש"ח ($30,000) כתמיכה כללית',
+        'האיחוד האירופי': '487,699 ש"ח לפרויקט "תקציביזם"',
+        'קבוצת מגדל': '154,000 ש"ח לפיתוח "המפה החברתית 2.0"',
+        'גוגל ישראל': '59,625 ש"ח, מטצינג עבור שעות התנדבות ותרומות לפרויקט פיתוח תשתיות טכנולוגיות, ו-11,140 ש"ח תמיכה כללית',
+      };
 
   return (
     <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
@@ -65,7 +78,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 alt="yad hanadiv"
                 width={125} //228
                 height={75} //36
-                onClick={() => handleImageClick('yad hanadiv')}
+                onClick={() => open('קרן יד הנדיב')}
+                className="cursor-pointer"
             />
             <Image
                 src={isCivilRightsHovered ? civilRightsC : civilRightsG}
@@ -74,7 +88,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={55} //36
                 onMouseEnter={() => setIsCivilRightsHovered(true)}
                 onMouseLeave={() => setIsCivilRightsHovered(false)}
-                onClick={() => handleImageClick('civil rights')}
+                onClick={() => open('האגודה לזכויות האזרח בישראל')}
+                className="cursor-pointer"
             />
             <Image
                 src={isUnHovered ? unC : unG}
@@ -83,6 +98,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={100} 
                 onMouseEnter={() => setIsUnHovered(true)}
                 onMouseLeave={() => setIsUnHovered(false)}
+                onClick={() => open('האיחוד האירופי')}
+                className="cursor-pointer"
             />
             <Image
                 src={isVanLeerHovered ? vanLeerC : vanLeerG}
@@ -91,6 +108,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={100} //36
                 onMouseEnter={() => setIsVanLeerHovered(true)}
                 onMouseLeave={() => setIsVanLeerHovered(false)}
+                onClick={() => open('מכון ון ליר')}
+                className="cursor-pointer"
             />
         </div>
         <div className="flex mx-20 relative justify-between">
@@ -101,6 +120,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={100} //36
                 onMouseEnter={() => setIsNifHovered(true)}
                 onMouseLeave={() => setIsNifHovered(false)}
+                onClick={() => open('הקרן החדשה לישראל')}
+                className="cursor-pointer"
             />
             <Image
                 src={isMigdalHovered ? migdalC : migdalG}
@@ -109,6 +130,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={55} //36
                 onMouseEnter={() => setIsMigdalHovered(true)}
                 onMouseLeave={() => setIsMigdalHovered(false)}
+                onClick={() => open('קבוצת מגדל')}
+                className="cursor-pointer"
             />
             <Image
                 src={isMatachHovered ? matachC : matachG}
@@ -117,6 +140,8 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={100} 
                 onMouseEnter={() => setIsMatachHovered(true)}
                 onMouseLeave={() => setIsMatachHovered(false)}
+                onClick={() => open('המרכז לטכנולוגיה חינוכית (מט"ח)')}
+                className="cursor-pointer"
             />
             <Image
                 src={isGoogleHovered ? googleC : googleG}
@@ -125,26 +150,30 @@ export default function PartnersSection({colors}: {colors: string}) {
                 height={100} //36
                 onMouseEnter={() => setIsGoogleHovered(true)}
                 onMouseLeave={() => setIsGoogleHovered(false)}
+                onClick={() => open('גוגל ישראל')}
+                className="cursor-pointer"
             />
         </div>
       </div>
 
-      <ReactModal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Image Modal"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
-        className="bg-white rounded-lg outline-none p-6 w-4/5 md:w-1/2"
-        >
-        <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="rounded-full text-l font-semibold p-2 border-0 pl-10 pr-10 m-0.5 h-[65px]"
-            onClick={closeModal}
-        >
-            <span dir="rtl">{partner}</span>
-        </motion.button>
-        </ReactModal>
+      <AnimatePresence
+        // Disable any initial animations on children that
+        // are present when the component is first rendered
+        initial={false}
+        // Only render one component at a time.
+        // The exiting component will finish its exit
+        // animation before entering component is rendered
+        mode="wait"
+        // Fires when all exiting nodes have completed animating out
+        onExitComplete={() => null}
+      >
+
+        {modalOpen &&
+          <PartnershipInfo
+            handleClose={close}
+            partner={Partners[activeField as string]}
+            description={activeField as string} />}
+      </AnimatePresence>
 
     </section>
   );

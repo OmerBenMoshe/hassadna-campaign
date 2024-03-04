@@ -112,7 +112,7 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
         </div>
         <div className="flex flex-col justify-center mt-10 p-0">
           <span className="text-l m-0 p-0">
-            הסנדא לידע ציבורי נעזרת במתנדבות ומתנדבים <br />מתחומים רבים על מנת לקדם את מטרת המיזם,<br />ונותנת להם כלים וניסיון שיעזרו להם.ן בעולם האמיתי!
+            הסדנא לידע ציבורי נעזרת במתנדבות ומתנדבים <br />מתחומים רבים על מנת לקדם את מטרת המיזם,<br />ונותנת להם כלים וניסיון שיעזרו להם.ן בעולם האמיתי!
           </span>
           <br />
           <span className="text-xl m-0 p-0">

@@ -9,9 +9,10 @@ import { LIGHT_COLORS, DARK_COLORS } from "@/lib/config";
 import { useState } from "react";
 import FiguresSection from "@/lib/components/sections/figuresSection";
 import ProjectsSection from "@/lib/components/sections/projectsSection";
+import PartnersSection from "@/lib/components/sections/partnersSection";
 
 const AMOUNT_OF_SECTIONS = 2;
-const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS];
+const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS];
 
 export default function Home() {
   const [colors, setColors] = useState(SECTION_COLORS[0]);
@@ -41,6 +42,7 @@ export default function Home() {
       <div id="projectSection">
         <ProjectsSection colors={colors} />
       </div>
+      <PartnersSection colors={colors} />
     </WebsiteScreen>
   );
 }

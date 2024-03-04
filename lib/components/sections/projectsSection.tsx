@@ -16,7 +16,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
       className={`relative flex flex-col ${colors} h-[calc(375vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
-        className="sticky top-10 z-1 flex items-center text-7xl text-bold font-primary mx-10">
+        className="sticky top-10 z-1 flex items-center text-7xl text-bold font-primary mx-10 my-12">
           <span className="transform scale-x-[-1] pt-1 pr-5">
             <WhiteBracketSVG/>
           </span>

@@ -19,6 +19,7 @@ module.exports = {
       animation: {
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
+        float: 'float 4s infinite',
       },
       keyframes: {
         marquee: {
@@ -29,6 +30,10 @@ module.exports = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)'},
+          '50%': { transform: 'translateY(-10px)',},
+        }
       },
     },
     colors: {

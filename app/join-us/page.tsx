@@ -13,6 +13,21 @@ import { createClient } from '@supabase/supabase-js'
 // Create a single supabase client for interacting with your database
 const supabase = createClient('https://fevrcdgxpvtzvsqfqako.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZldnJjZGd4cHZ0enZzcWZxYWtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc2NjY1ODUsImV4cCI6MjAyMzI0MjU4NX0.L_4VuBpOD1J4prWrBPSlnhOW8BdJCwDG7Lc0vlh6rug')
 
+const flattenObject = (obj: any) => {
+  const flattened: {[key: string]: any} = {}
+  
+  Object.keys(obj).forEach((key) => {
+    if (Array.isArray(obj[key])) {
+      flattened[key] = obj[key].join(', '); // Convert array to string
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      Object.assign(flattened, flattenObject(obj[key]))
+    } else {
+      flattened[key] = obj[key]
+    }
+  })
+  
+  return flattened
+}
 
 export type FormStateType = {
   formData: [FormData, Dispatch<SetStateAction<FormData>>];
@@ -33,6 +48,7 @@ export type FormData = {
   professional: string[];
   projectsToJoin: string[];
   extraQuestions: string;
+  [key: string]: any; 
 };
 
 const initialFormData: FormData = {
@@ -81,10 +97,46 @@ export default function Page() {
     }
     setValidationErrors([])
 
-    console.log("Form submitted", formData);
+    console.log("Form submitted", formData); 
+    
+    type FormData = {
+      personal: {
+        fullName: string;
+        email: string;
+        linkedin: string;
+      };
+      educational: {
+        course: string;
+        bachelor: string;
+        master: string;
+        extraInfo: string;
+      };
+      professional: string[];
+      projectsToJoin: string[];
+      extraQuestions: string;
+      [key: string]: any; // Add index signature to allow indexing with a string
+    };
+
+    const supabaseData: any = {};
+    Object.keys(formData).forEach((key) => {
+      if (typeof formData[key] === "object") {
+        Object.keys(formData[key]).forEach((subKey) => {
+          supabaseData[subKey] = formData[key][subKey]; // Access subKey using formData[key]
+        });
+      } else {
+        supabaseData[key] = formData[key];
+      }
+    });
     const { data, error } = await supabase
       .from('volunteer-form')
-      .insert([formData]);
+      .insert([flattenObject(formData)]);
+
+      if (error) {
+        console.error('Error inserting data:', error);
+      } else {
+        console.log('Data inserted successfully:', data);
+      }
+
   }
 
   return (

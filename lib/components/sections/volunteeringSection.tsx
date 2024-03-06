@@ -105,8 +105,8 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
 
 
   return (
-    <section className={`flex flex-col m-0 p-0 items-center justify-around h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
-      <div dir={"rtl"} className="flex items-start justify-around">
+    <section className={`flex flex-col m-0 p-0 items-center justify-top h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
+      <div dir={"rtl"} className="flex items-start justify-around mt-16 mb-[15vh]">
         <div className=" text-8xl text-bold font-primary whitespace-nowrap">
           &lt; תחומי התנדבות&gt;
         </div>

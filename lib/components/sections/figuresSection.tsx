@@ -5,7 +5,7 @@ import BlackBracketSVG from "@/lib/components/svg/blackBracket";
 export default function FiguresSection({colors}: {colors: string}) {
 
   return (
-    <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    <section className={`flex flex-col ${colors} justify-center h-[calc(100vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
         className="flex items-center text-7xl text-bold font-primary mx-10">

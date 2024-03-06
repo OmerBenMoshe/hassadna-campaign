@@ -7,7 +7,7 @@ import WhiteBracketSVG from "../svg/whiteBracket";
 
 export default function WhatSection({colors}: {colors: string}) {
   return (
-    <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] pt-20 justify-center transition snap-center`}>
       <div
         dir={"rtl"}
         className="flex items-center mr-10 text-7xl text-bold font-primary">

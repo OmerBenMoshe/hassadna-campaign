@@ -2,7 +2,7 @@ const ImpactSection = ({colors}: {colors: string}) => {
   return (
     <section
       dir={"rtl"}
-      className={`flex flex-col justify-around h-[calc(100vh-88px)] px-20 pb-5 transition snap-center overflow-x-hidden overflow-y-hidden ${colors}`}
+      className={`flex flex-col justify-around h-[calc(100vh-100px)] pt-10 px-20 transition snap-center overflow-x-hidden overflow-y-hidden min-h-fit ${colors}`}
     >
   
       <div className={"flex mr-12"}>

@@ -58,7 +58,7 @@ export default function PartnersSection({colors}: {colors: string}) {
       };
 
   return (
-    <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    <section className={`flex flex-col ${colors} justify-center h-[calc(100vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
         className="flex items-center text-7xl text-bold font-primary mx-10 -mt-3">

@@ -17,7 +17,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
       className={`relative flex flex-col ${colors} h-[calc(375vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
-        className="sticky top-10 z-1 flex items-center text-7xl text-bold font-primary mx-10 my-12">
+        className="sticky top-24 z-1 flex items-center text-7xl text-bold font-primary mx-10 my-20">
           <span className="transform scale-x-[-1] pt-1 pr-5">
             <WhiteBracketSVG/>
           </span>
@@ -30,7 +30,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
       <div className="flex z-2 absolute w-full mt-32">
         <div 
           dir={"rtl"}
-          className="flex flex-col items-center text-lg gap-2 m-10 z-5 w-1/2 gap-56 pt-24">
+          className="flex flex-col items-center text-lg gap-2 m-10 z-[100] w-1/2 gap-56 pt-24">
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
             <div className="flex w-[150px] h-[50px] items-center justify-center mr-10 mt-12">
@@ -54,7 +54,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </Link>
           </div>
 
-          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
+          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center z-[100] p-12">
             <div className="flex w-[120px] h-[50px] items-center justify-center mr-14 mt-12">
               <OpenPensionSVG/>
             </div>
@@ -76,7 +76,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </Link>
           </div>
 
-          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
+          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center z-[100] p-12">
             <div className="flex w-[75px] h-[75px] items-center justify-center mr-20 mt-12 -mb-4">
               <LawsSVG/>
             </div>
@@ -102,7 +102,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
 
         <div 
           dir={"rtl"}
-          className="flex flex-col items-center text-lg gap-2 m-10 z-2 w-1/2 gap-56">
+          className="flex flex-col items-center text-lg gap-2 m-10 z-[100] w-1/2 gap-56">
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
             <div className="flex w-[120px] h-[40px] items-center justify-center mr-14 mt-12">
@@ -126,7 +126,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </Link>
           </div>
 
-          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
+          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center z-[100] p-12">
             <div className="flex w-[120px] h-[50px] items-center justify-center mr-14 mt-12">
               <DataCitySVG/>
             </div>
@@ -148,7 +148,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </Link>
           </div>
 
-          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
+          <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center z-[100] p-12">
             <div className="flex w-[125px] h-[125px] items-center justify-center mr-14 mt-10 -mb-8">
               <BudgetSVG/>
             </div>

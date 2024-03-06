@@ -43,7 +43,9 @@ export default function Home() {
       <div id="projectSection">
         <ProjectsSection colors={colors} />
       </div>
-      <PartnersSection colors={colors} />
+      <div id="partnersSection">
+        <PartnersSection colors={colors} />
+      </div>
       <EndSection colors={colors} />
     </WebsiteScreen>
   );

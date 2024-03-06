@@ -40,6 +40,7 @@ export default function EndSection({colors}: {colors: string}) {
                     <Link
                         className="text-white"
                         href="https://forum.hasadna.org.il/"
+                        target="_blank"
                         dir={"rtl"}>
                         https://forum.hasadna.org.il
                     </Link>
@@ -70,6 +71,26 @@ export default function EndSection({colors}: {colors: string}) {
                     </p>
                 </div>
             </div>
+        </div>
+
+        <div 
+            dir={"rtl"}
+            className="flex justify-center items-center pt-4 pb-2">
+            מוזמנים.ות להציץ&nbsp;
+            <Link 
+                href="https://www.hasadna.org.il/"
+                target="_blank"
+                className="text-white hover:underline hover:decoration-orange decoration-2">
+                    באתר שלנו 
+            </Link>
+            &nbsp;וכמובן גם&nbsp;
+            <Link 
+                href="https://www.facebook.com/hasadna.org.il/"
+                target="_blank"
+                className="text-white hover:underline hover:decoration-orange decoration-2">
+                    בפייסבוק שלנו
+            </Link>
+              
         </div>
       </div>
 

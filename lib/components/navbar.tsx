@@ -12,7 +12,7 @@ const darkLogo = '/images/dark_colors_logo.svg';
 
 
 export default function Navbar({ colors }: { colors: string }) {
-  const linkClasses = `hover:underline ${colors} transition`;
+  const linkClasses = `${colors} transition`;
 
   //@ts-ignore
   const scrollToSection = (e, id) => {
@@ -31,14 +31,23 @@ export default function Navbar({ colors }: { colors: string }) {
           <span dir="rtl" className="text-white">הצטרפו אלינו! </span>
         </button>
       </Link>
-      <div className="flex items-center space-x-5">
-        <Link href="/" className={linkClasses}>
+      <div className="flex items-center space-x-5 ">
+        <Link 
+          href="/" 
+          onClick={(e) => scrollToSection(e, 'partnersSection')} 
+          className={`${linkClasses} hover:underline hover:decoration-orange decoration-2`}>
           עובדים איתנו
         </Link>
-        <Link href="/" onClick={(e) => scrollToSection(e, 'projectSection')} className={linkClasses}>
+        <Link 
+          href="/" 
+          onClick={(e) => scrollToSection(e, 'projectSection')} 
+          className={`${linkClasses} hover:underline hover:decoration-orange decoration-2`}>
           הפרויקטים שלנו
         </Link>
-        <Link  href="/" onClick={(e) => scrollToSection(e, 'whoSection')} className={linkClasses}>
+        <Link  
+          href="/" 
+          onClick={(e) => scrollToSection(e, 'whoSection')} 
+          className={`${linkClasses} hover:underline hover:decoration-orange decoration-2`}>
           מי אנחנו
         </Link>
 

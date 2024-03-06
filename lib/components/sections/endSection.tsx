@@ -8,7 +8,7 @@ export default function EndSection({colors}: {colors: string}) {
     <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
-        className="flex flex-col justify-center items-center text-7xl text-bold font-primary animate-float">
+        className="flex flex-col justify-center items-center text-7xl text-bold font-primary animate-float mt-10">
             <div className="flex">
                 זאת הזדמנות
             </div>
@@ -22,21 +22,54 @@ export default function EndSection({colors}: {colors: string}) {
             <Link href="/join-us">
                 <button 
                     dir={"rtl"}
-                    className="flex bg-neon rounded-full text-darkGray border-neon font-extrabold py-3 px-28 hover:bg-orange hover:border-orange hover:text-white">
+                    className="flex bg-neon rounded-full justify-center items-center text-darkGray border-neon font-bold text-lg py-3 px-28 hover:bg-orange hover:border-orange hover:text-white">
                     שאלון קצר ואתם איתנו!
                 </button>
             </Link>
-        <div className="flex justify-around">
-            <div className="flex">
-                item 1
-            </div>
-            <div className="flex">
-                item 2
-            </div>
-            <div className="flex">
-                item 3
-            </div>
         </div>
+        <div>
+            <div 
+                dir={"rtl"}
+                className="flex justify-around text-lg pt-12 gap-36"
+                >
+                <div className="flex flex-col">
+                    <p className="font-bold">
+                        פנו אלינו בפורום לכל שאלה
+                    </p>
+                    <br/>
+                    <Link
+                        className="text-white"
+                        href="https://forum.hasadna.org.il/"
+                        dir={"rtl"}>
+                        https://forum.hasadna.org.il
+                    </Link>
+                </div>
+                <div className="flex flex-col">
+                    <p className="font-bold">
+                        וכמובן תמיד זמינים במייל
+                    </p>
+                    <br/>
+                    <Link
+                        className="text-white"
+                        href="mailto:info@hasadna.org.il"
+                        dir={"rtl"}>
+                        info@hasadna.org.il
+                    </Link>
+                </div>
+                <div className="flex flex-col">
+                    <p className="font-bold">
+                        או לבקר במשרדים שלנו
+                    </p>
+                    <br/>
+                    <p
+                        className="text-white"
+                        dir={"rtl"}>
+                        בית העמותות, סעדיה גאון 26, <br/>
+                        בתל-אביב 6713521, ת.ד. 20001
+
+                    </p>
+                </div>
+            </div>
         </div>
       </div>
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function EndSection({colors}: {colors: string}) {
 
   return (
-    <section className={`flex flex-col ${colors} h-[calc(100vh-88px)] transition snap-center`}>
+    <section className={`flex flex-col justify-between ${colors} h-[calc(100vh-88px)] transition snap-center`}>
       <div
         dir={"rtl"}
         className="flex flex-col justify-center items-center text-7xl text-bold font-primary animate-float mt-10">
@@ -22,12 +22,11 @@ export default function EndSection({colors}: {colors: string}) {
             <Link href="/join-us">
                 <button 
                     dir={"rtl"}
-                    className="flex bg-neon rounded-full justify-center items-center text-darkGray border-neon font-bold text-lg py-3 px-28 hover:bg-orange hover:border-orange hover:text-white">
+                    className="flex bg-neon rounded-full justify-center items-center text-darkGray border-neon font-bold text-lg py-3 px-28 hover:bg-orange hover:border-orange hover:text-white transition">
                     שאלון קצר ואתם איתנו!
                 </button>
             </Link>
         </div>
-        <div>
             <div 
                 dir={"rtl"}
                 className="flex justify-around text-lg pt-12 gap-36"
@@ -92,7 +91,6 @@ export default function EndSection({colors}: {colors: string}) {
             </Link>
               
         </div>
-      </div>
 
     
     </section>

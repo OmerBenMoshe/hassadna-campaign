@@ -21,14 +21,14 @@ export default function Navbar({ colors }: { colors: string }) {
   };
 
   return (
-    <nav className={`sticky top-0 z-10 flex items-center justify-between pt-1 text-l transition ${colors}`}>
+    <nav className={`sticky top-0 z-10 flex items-center justify-between py-5 text-l transition ${colors}`}>
       <Link href="/join-us">
         <button
           className={
-            "m-0 ml-10 pl-4 pr-4 pt-1 pb-1 rounded-full text-l text-bold p-2 bg-orange shadow-sharp border-none"
+            "m-0 ml-10 pl-4 pr-4 pt-1 pb-1 rounded-full text-l text-bold p-2 bg-orange hover:bg-neon hover:text-darkGray transition shadow-sharp border-none"
           }
         >
-          <span dir="rtl" className="text-white">הצטרפו אלינו! </span>
+          <span dir="rtl">הצטרפו אלינו! </span>
         </button>
       </Link>
       <div className="flex items-center space-x-5 ">

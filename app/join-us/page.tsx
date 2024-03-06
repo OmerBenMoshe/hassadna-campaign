@@ -89,12 +89,12 @@ export default function Page() {
   const [isConfetti, setIsConfetti] = useState<boolean>(false)
 
   const onFormSubmit = async () => {
-    setIsConfetti(true)
     const validation = validateForm(formData)
     if (validation.length) {
       setValidationErrors(validation)
       return
     }
+    setIsConfetti(true)
     setValidationErrors([])
 
     console.log("Form submitted", formData); 

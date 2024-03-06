@@ -13,7 +13,7 @@ import PartnersSection from "@/lib/components/sections/partnersSection";
 import EndSection from "@/lib/components/sections/endSection";
 
 const AMOUNT_OF_SECTIONS = 2;
-const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS];
+const SECTION_COLORS = [LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, LIGHT_COLORS, DARK_COLORS, DARK_COLORS, DARK_COLORS, LIGHT_COLORS, DARK_COLORS];
 
 export default function Home() {
   const [colors, setColors] = useState(SECTION_COLORS[0]);

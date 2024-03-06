@@ -27,7 +27,7 @@ export default function ProjectsSection({colors}: {colors: string}) {
           </span>
       </div>
 
-      <div className="flex z-2 absolute w-full mt-20">
+      <div className="flex z-2 absolute w-full mt-32">
         <div 
           dir={"rtl"}
           className="flex flex-col items-center text-lg gap-2 m-10 z-5 w-1/2 gap-56 pt-24">
@@ -45,10 +45,10 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </a>
             <p className="flex font-normal text-darkGray leading-none">
             <br/>
-            איגוד והצגת נתוני איכות על מגוון קווי אוטובוסים וחברות תחבורה ציבורית בארץ.
+            איגוד והצגת נתוני איכות על מגוון קווי אוטובוסים וחברות תחבורה ציבורית&nbsp;בארץ.
             </p>
             <Link href="/join-us">
-              <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
+              <button className="font-bold bg-purple rounded-full inline-block mx-8 py-3 px-5 mb-12 hover:bg-neon transition hover:text-darkGray">
                 הצטרפו לפרויקט
               </button>
             </Link>
@@ -67,10 +67,10 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </a>
             <p className="flex font-normal text-darkGray leading-none ">
             <br/>
-            אתר המציג פירוט על ניהול אפיקי השקעות של קופות הפנסיה והגמל, כולל מידע והשוואה של הקצאת נכסים של קופות וניתוח הנתונים על ציר זמן.
+            אתר המציג פירוט על ניהול אפיקי השקעות של קופות הפנסיה והגמל, כולל מידע והשוואה של הקצאת נכסים של קופות וניתוח הנתונים על&nbsp;ציר&nbsp;זמן.
             </p>
             <Link href="/join-us">
-              <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
+              <button className="font-bold bg-orange rounded-full inline-block mx-8 py-3 px-5 mb-12 hover:bg-neon transition hover:text-darkGray">
                 הצטרפו לפרויקט
               </button>
             </Link>
@@ -89,10 +89,10 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </a>
             <p className="flex font-normal text-darkGray leading-none ">
             <br/>
-            מיזם הפועל באתר האינטרנט ׳ויקיטקסט׳ שנועד לרכז ולהנגיש את חוקי מדינת ישראל בנוסח עדכני ופשוט להבנה.
+            מיזם הפועל באתר האינטרנט ׳ויקיטקסט׳ שנועד לרכז ולהנגיש את חוקי מדינת ישראל בנוסח עדכני ופשוט&nbsp;להבנה.
             </p>
             <Link href="/join-us">
-              <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
+              <button className="font-bold bg-orange text-white rounded-full inline-block mx-8 py-3 px-5 mb-12 hover:bg-neon transition hover:text-darkGray">
                 הצטרפו לפרויקט
               </button>
             </Link>
@@ -117,10 +117,10 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </a>
             <p className="flex font-normal text-darkGray leading-none">
             <br/>
-            שיקוף הפעולות בכנסת, כולל עדכוני פרוטוקולים של ועדות ומליאות, הצעות חוק יזומות ומידע על חברי כנסת וסיעות שונות.
+            שיקוף הפעולות בכנסת, כולל עדכוני פרוטוקולים של ועדות ומליאות, הצעות חוק יזומות ומידע על חברי כנסת וסיעות&nbsp;שונות.
             </p>
             <Link href="/join-us">
-              <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
+              <button className="font-bold bg-orange rounded-full inline-block mx-8 py-3 px-5 mb-12 hover:bg-neon transition hover:text-darkGray">
                 הצטרפו לפרויקט
               </button>
             </Link>
@@ -139,10 +139,10 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </a>
             <p className="flex font-normal text-darkGray leading-none ">
             <br/>
-            הנגשת מידע ונתונים ממשלתיים לרשויות מקומיות למטרת יצירת פרויקטים עירוניים וקידום יזמות דיגיטלית במרחב העירוני.
+            הנגשת מידע ונתונים ממשלתיים לרשויות מקומיות למטרת יצירת פרויקטים עירוניים וקידום יזמות דיגיטלית במרחב&nbsp;העירוני.
             </p>
             <Link href="/join-us">
-              <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
+              <button className="font-bold bg-purple text-white rounded-full inline-block mx-8 py-3 px-5 mb-12 hover:bg-neon transition hover:text-darkGray">
                 הצטרפו לפרויקט
               </button>
             </Link>
@@ -161,10 +161,10 @@ export default function ProjectsSection({colors}: {colors: string}) {
             </a>
             <p className="flex font-normal text-darkGray leading-none ">
             <br/>
-            אתר שנועד להנגיש את נתוני תקציב המדינה, בדגש על התחלקות התקציב בין משרדים, השתנות התקציב השנתי והוצאות כלכליות במהלך השנה.
+            אתר שנועד להנגיש את נתוני תקציב המדינה, בדגש על התחלקות התקציב בין משרדים, השתנות התקציב השנתי והוצאות כלכליות במהלך&nbsp;השנה.
             </p>
             <Link href="/join-us">
-              <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
+              <button className="font-bold bg-purple rounded-full inline-block mx-8 py-3 px-5 mb-12 hover:bg-neon transition hover:text-darkGray">
                 הצטרפו לפרויקט
               </button>
             </Link>

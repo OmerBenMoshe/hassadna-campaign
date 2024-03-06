@@ -22,12 +22,12 @@ const LastDetails = ({
   };
 
   return (
-    <section dir={"rtl"} className="flex">
+    <section dir={"rtl"} className="flex justify-between pb-20">
       <div className="flex flex-col grow-[3] min-h-40">
         <SubTitle>לפני שנסיים, האם יש לכם.ן שאלות נוספות?</SubTitle>
-        <TextArea value={extraQuestions} onChange={handleTextAreaChange} />
+        <TextArea className="m-0" value={extraQuestions} onChange={handleTextAreaChange} />
       </div>
-      <div className={"grow-[1] flex items-center justify-center"}>
+      <div className={"flex items-end justify-end grow-[1]"}>
         <button
           className={
             "bg-neon shadow-sharp rounded-full border-none hover:bg-orange hover:text-white text-darkGray font-bold transition px-24 py-3"

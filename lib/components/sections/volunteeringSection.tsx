@@ -106,8 +106,8 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
 
 
   return (
-    <section className={`flex flex-col m-0 p-0 items-center justify-top h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
-      <div dir={"rtl"} className="flex items-start justify-around mt-16 mb-[15vh]">
+    <section className={`flex flex-col m-0 p-0 items-between justify-top h-[calc(100vh-88px)] overflow-x-hidden overflow-y-hidden transition snap-center ${colors}`}>
+      <div dir={"rtl"} className="flex items-start justify-around mt-16 mb-[15vh] -mx-20">
 
         <div className="flex items-center text-7xl text-bold font-primary whitespace-nowrap">
         <span className="leading-none transform scale-x-[-1] pt-1 pr-5">
@@ -119,7 +119,7 @@ const VolunteeringSection = ({ colors }: { colors: string }) => {
           </span>
           
         </div>
-        <div className="flex flex-col justify-center mx-10 pt-3 space-y-4">
+        <div className="flex flex-col justify-center pt-3 space-y-4">
           <span className="text-md">
             הסדנא לידע ציבורי נעזרת במתנדבות ומתנדבים <br />מתחומים רבים על מנת לקדם את מטרת המיזם,<br />ונותנת להם כלים וניסיון שיעזרו להם.ן בעולם האמיתי!
           </span>

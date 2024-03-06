@@ -7,6 +7,7 @@ import OpenPensionSVG from "../svg/openPension";
 import OpenKnessetSVG from "../svg/openKnesset";
 import DataCitySVG from "../svg/dataCity";
 import BudgetSVG from "../svg/budget";
+import Link from "next/link";
 
 
 export default function ProjectsSection({colors}: {colors: string}) {
@@ -46,9 +47,11 @@ export default function ProjectsSection({colors}: {colors: string}) {
             <br/>
             איגוד והצגת נתוני איכות על מגוון קווי אוטובוסים וחברות תחבורה ציבורית בארץ.
             </p>
-            <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
-              הצטרפו לפרויקט
-            </button>
+            <Link href="/join-us">
+              <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
+                הצטרפו לפרויקט
+              </button>
+            </Link>
           </div>
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
@@ -66,9 +69,11 @@ export default function ProjectsSection({colors}: {colors: string}) {
             <br/>
             אתר המציג פירוט על ניהול אפיקי השקעות של קופות הפנסיה והגמל, כולל מידע והשוואה של הקצאת נכסים של קופות וניתוח הנתונים על ציר זמן.
             </p>
-            <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
-              הצטרפו לפרויקט
-            </button>
+            <Link href="/join-us">
+              <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
+                הצטרפו לפרויקט
+              </button>
+            </Link>
           </div>
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
@@ -86,9 +91,11 @@ export default function ProjectsSection({colors}: {colors: string}) {
             <br/>
             מיזם הפועל באתר האינטרנט ׳ויקיטקסט׳ שנועד לרכז ולהנגיש את חוקי מדינת ישראל בנוסח עדכני ופשוט להבנה.
             </p>
-            <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
-              הצטרפו לפרויקט
-            </button>
+            <Link href="/join-us">
+              <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
+                הצטרפו לפרויקט
+              </button>
+            </Link>
           </div>
 
         </div>
@@ -112,9 +119,11 @@ export default function ProjectsSection({colors}: {colors: string}) {
             <br/>
             שיקוף הפעולות בכנסת, כולל עדכוני פרוטוקולים של ועדות ומליאות, הצעות חוק יזומות ומידע על חברי כנסת וסיעות שונות.
             </p>
-            <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
-              הצטרפו לפרויקט
-            </button>
+            <Link href="/join-us">
+              <button className="font-bold bg-orange rounded-full inline-block mx-8 py-4 mb-12">
+                הצטרפו לפרויקט
+              </button>
+            </Link>
           </div>
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
@@ -132,9 +141,11 @@ export default function ProjectsSection({colors}: {colors: string}) {
             <br/>
             הנגשת מידע ונתונים ממשלתיים לרשויות מקומיות למטרת יצירת פרויקטים עירוניים וקידום יזמות דיגיטלית במרחב העירוני.
             </p>
-            <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
-              הצטרפו לפרויקט
-            </button>
+            <Link href="/join-us">
+              <button className="font-bold bg-neon text-darkGray rounded-full inline-block mx-8 py-4 mb-12">
+                הצטרפו לפרויקט
+              </button>
+            </Link>
           </div>
 
           <div className="flex flex-col bg-white rounded-40 w-[330px] h-[380px] text-center justify-center p-12">
@@ -152,9 +163,11 @@ export default function ProjectsSection({colors}: {colors: string}) {
             <br/>
             אתר שנועד להנגיש את נתוני תקציב המדינה, בדגש על התחלקות התקציב בין משרדים, השתנות התקציב השנתי והוצאות כלכליות במהלך השנה.
             </p>
-            <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
-              הצטרפו לפרויקט
-            </button>
+            <Link href="/join-us">
+              <button className="font-bold bg-purple rounded-full inline-block mx-8 py-4 mb-12">
+                הצטרפו לפרויקט
+              </button>
+            </Link>
           </div>
 
         </div>

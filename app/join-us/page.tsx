@@ -7,8 +7,11 @@ import JoinProjects from "./sections/JoinProjects";
 import LastDetails from "./sections/LastDetails";
 import ProfSkills from "./sections/ProfSkills";
 import UserDetails from "./sections/UserDetails";
+import "./animations.css";
 
 import { createClient } from '@supabase/supabase-js'
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // Create a single supabase client for interacting with your database
 const supabase = createClient('https://fevrcdgxpvtzvsqfqako.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZldnJjZGd4cHZ0enZzcWZxYWtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc2NjY1ODUsImV4cCI6MjAyMzI0MjU4NX0.L_4VuBpOD1J4prWrBPSlnhOW8BdJCwDG7Lc0vlh6rug')
@@ -84,6 +87,7 @@ const validateForm = (formData: FormData) => {
 }
 
 export default function Page() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [validationErrors, setValidationErrors] = useState<string[]>([])
   const [isConfetti, setIsConfetti] = useState<boolean>(false)
@@ -137,18 +141,24 @@ export default function Page() {
         console.log('Data inserted successfully:', data);
       }
 
+    // set timeout and than redirect to home page
+    setTimeout(() => {
+      router.push('/')    
+    }, 1300)
   }
 
   return (
-    <main className={"bg-purple min-h-screen flex flex-col p-6 space-y-14"}>
+    <main className={"bg-purple min-h-screen flex flex-col p-6 space-y-14 animate-fallFromTop"}>
       <div className="flex justify-start">
-        <button
-          className={
-            "bg-orange text-white shadow-sharp rounded-full border-none hover:bg-neon hover:text-darkGray transition px-4"
-          }
-        >
-          חזרה לעמוד
-        </button>
+        <Link href="/">
+          <button
+            className={
+              "bg-orange text-white shadow-sharp rounded-full border-none hover:bg-neon hover:text-darkGray transition px-4"
+            }
+          >
+            חזרה לעמוד
+          </button>
+        </Link>
       </div>
       <div className={"flex justify-center"}>
         <Title />

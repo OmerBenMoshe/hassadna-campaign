@@ -1,0 +1,12 @@
+@keyframes fallFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.animate-fallFromTop {
+  animation: fallFromTop 1s ease-out;
+}

@@ -13,7 +13,7 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: 'Digital Product Jam Starter Kit',
+  title: 'Hassadna Campaign',
   description: 'A starter kit for wiritng code in the Digital Product Jam course.',
 }
 

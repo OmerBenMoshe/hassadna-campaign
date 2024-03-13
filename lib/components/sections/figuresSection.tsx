@@ -20,7 +20,7 @@ export default function FiguresSection({colors}: {colors: string}) {
 
       <div 
         dir={"rtl"}
-        className="flex items-center font-primary text-8xl gap-2 m-10">
+        className="flex items-center justify-center font-primary text-8xl gap-2 m-10">
         <div className="flex flex-col bg-neon rounded-3xl w-[300px] h-[350px] text-center justify-center p-12 transform transition-transform duration-100 hover:rotate-3">
           2011
           <p className="flex font-secondary text-lg">
